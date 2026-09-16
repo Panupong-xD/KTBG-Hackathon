@@ -18,11 +18,8 @@ import {
   MoreHorizontal,
   Star,
   CreditCard,
-  ShieldCheck,
   CheckCircle2,
   ChevronRight,
-  Sparkles,
-  TrendingUp,
   RotateCcw
 } from 'lucide-react';
 
@@ -38,46 +35,60 @@ export default function KBankPhoneMockup({ activeStep, onSelectStep }: KBankPhon
   return (
     <div className="relative mx-auto flex flex-col items-center select-none">
       
-      {/* Smartphone Hardware Frame (iPhone style matching reference image) */}
-      <div className="relative w-[320px] sm:w-[355px] h-[690px] bg-[#E8ECEF] rounded-[52px] p-[10px] shadow-2xl shadow-slate-400/50 border-4 border-[#D3D9DE] ring-1 ring-black/5">
+      {/* Smartphone Hardware Frame (Matte Black Titanium iPhone with Side Buttons) */}
+      <div className="relative w-[320px] sm:w-[355px] h-[700px] bg-[#0A0D10] rounded-[52px] p-[10px] shadow-2xl shadow-slate-900/35 border-[4px] border-[#1C2127] ring-1 ring-white/10">
         
-        {/* Outer Bezel Shadow & Subtle Reflection */}
-        <div className="absolute inset-0 rounded-[48px] border border-white/60 pointer-events-none" />
+        {/* Left Side Volume Buttons on Hardware Frame */}
+        <div className="absolute -left-[6px] top-[110px] w-[3px] h-[28px] bg-[#1C2127] rounded-l-sm" />
+        <div className="absolute -left-[6px] top-[148px] w-[3px] h-[48px] bg-[#1C2127] rounded-l-sm" />
+        <div className="absolute -left-[6px] top-[204px] w-[3px] h-[48px] bg-[#1C2127] rounded-l-sm" />
+        
+        {/* Right Side Power Button on Hardware Frame */}
+        <div className="absolute -right-[6px] top-[140px] w-[3px] h-[65px] bg-[#1C2127] rounded-r-sm" />
 
         {/* Screen Display Container */}
         <div className="relative w-full h-full bg-[#12272E] text-white rounded-[42px] overflow-hidden flex flex-col font-sans">
           
-          {/* iOS Status Bar */}
-          <div className="h-10 px-6 flex items-center justify-between text-xs text-white z-30 pt-1 shrink-0">
-            <span className="font-semibold text-xs tracking-tight">9:41</span>
-            
-            {/* Notch / Speaker */}
-            <div className="w-28 h-4 bg-black rounded-b-xl flex items-center justify-center gap-2">
-              <div className="w-10 h-1 bg-[#232323] rounded-full" />
-              <div className="w-2 h-2 rounded-full bg-[#1c1c1e]" />
+          {/* iPhone Floating Dynamic Island (Clean pill shape, NOT cutting/แหว่ง into screen) */}
+          <div className="absolute top-2.5 left-1/2 -translate-x-1/2 h-[24px] w-[96px] bg-black rounded-full flex items-center justify-between px-3 z-40 shadow-sm pointer-events-none">
+            {/* Camera sensor */}
+            <div className="w-2.5 h-2.5 rounded-full bg-[#0d0d0d] ring-1 ring-white/10 flex items-center justify-center">
+              <div className="w-1 h-1 rounded-full bg-[#1a2b3c]/60" />
             </div>
+            {/* Green status indicator */}
+            <div className="w-2 h-2 rounded-full bg-black flex items-center justify-center">
+              <div className="w-1 h-1 rounded-full bg-[#00A950] animate-pulse" />
+            </div>
+          </div>
 
+          {/* iOS Status Bar (Flanking the Dynamic Island) */}
+          <div className="h-11 px-6 flex items-center justify-between text-xs text-white z-30 pt-1 shrink-0">
+            <span className="font-semibold text-xs tracking-tight pl-1">9:41</span>
+            
             {/* Status Icons */}
-            <div className="flex items-center gap-1.5 text-white">
-              <Signal className="w-3 h-3" />
-              <Wifi className="w-3 h-3" />
+            <div className="flex items-center gap-1.5 text-white pr-1">
+              <Signal className="w-3.5 h-3.5" />
+              <Wifi className="w-3.5 h-3.5" />
               <Battery className="w-4 h-4 text-[#00A950]" />
             </div>
           </div>
 
           {/* K PLUS App Top Header */}
           <div className="px-5 py-2 flex items-center justify-between z-20 shrink-0">
-            {/* User Avatar */}
-            <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-[#00A950] to-[#00D06C] p-0.5 shadow-sm">
+            {/* User Avatar with KBank Green Accent Ring */}
+            <div className="w-9 h-9 rounded-full bg-[#00A950] p-0.5 shadow-sm">
               <div className="w-full h-full rounded-full bg-[#1C3A43] flex items-center justify-center text-xs font-bold text-white overflow-hidden">
-                <span className="text-[11px]">K+</span>
+                <span className="text-[11px] font-bold">FJ</span>
               </div>
             </div>
 
-            {/* K+ Centered Logo (White K, Green +) */}
-            <div className="flex items-center text-xl font-extrabold tracking-tight">
-              <span className="text-white">K</span>
-              <span className="text-[#00A950] text-2xl leading-none font-black">+</span>
+            {/* Centered KBank App Icon (KbankAppIcon.svg replacing text K+) */}
+            <div className="flex items-center justify-center">
+              <img
+                src="/KbankAppIcon.svg"
+                alt="KBank App Icon"
+                className="w-7 h-7 rounded-lg shadow-sm"
+              />
             </div>
 
             {/* Right Icons: Bell with Notification Badge & Power */}
@@ -102,36 +113,33 @@ export default function KBankPhoneMockup({ activeStep, onSelectStep }: KBankPhon
                 <span className="text-xs font-bold text-white tracking-wide">
                   K+ To Do
                 </span>
-                <span className="text-[10px] text-[#00A950] font-medium bg-[#00A950]/15 px-1.5 py-0.2 rounded">
-                  Predictive Auto-Save
-                </span>
               </div>
 
               {/* Dynamic Feature Card (Replaces Welcome to K+) */}
-              <div className="relative bg-white text-slate-900 rounded-2xl p-4 shadow-lg min-h-[145px] flex flex-col justify-between transition-all duration-300">
+              <div className="relative bg-white text-slate-900 rounded-2xl p-4 shadow-lg min-h-[148px] flex flex-col justify-between transition-all duration-300">
                 
                 {/* State 1: Data Ingestion & Classification */}
                 {activeStep === 0 && (
-                  <div className="animate-fadeIn">
+                  <div>
                     <div className="flex items-start justify-between mb-2">
                       <div>
-                        <div className="text-[11px] font-semibold text-slate-500">ยอดคงเหลือวิเคราะห์แล้ว</div>
-                        <div className="text-lg font-extrabold text-slate-900">฿34,250.00</div>
+                        <div className="text-[11px] font-semibold text-slate-500">เงินเดือน First Jobber วิเคราะห์แล้ว</div>
+                        <div className="text-lg font-extrabold text-slate-900">฿32,500.00</div>
                       </div>
                       <span className="text-[10px] font-bold text-[#00A950] bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-                        AI Tagged
+                        ML Categorized
                       </span>
                     </div>
 
                     <div className="space-y-1.5 text-xs">
                       <div className="flex items-center justify-between bg-slate-50 p-1.5 rounded-lg border border-slate-100">
-                        <span className="text-slate-600 font-medium truncate">ค่าเช่าคอนโด Life Asoke</span>
+                        <span className="text-slate-600 font-medium truncate">ค่าเช่าหอพักใกล้ออฟฟิศ</span>
                         <span className="text-[10px] bg-blue-100 text-blue-800 font-bold px-1.5 py-0.2 rounded shrink-0">
-                          Fixed -฿8,500
+                          Fixed -฿7,500
                         </span>
                       </div>
                       <div className="flex items-center justify-between bg-slate-50 p-1.5 rounded-lg border border-slate-100">
-                        <span className="text-slate-600 font-medium truncate">EVEANDBOY สยาม</span>
+                        <span className="text-slate-600 font-medium truncate">ช้อปปิ้ง & เลี้ยงฉลองงานใหม่</span>
                         <span className="text-[10px] bg-amber-100 text-amber-800 font-bold px-1.5 py-0.2 rounded shrink-0">
                           Discretionary -฿1,420
                         </span>
@@ -142,9 +150,9 @@ export default function KBankPhoneMockup({ activeStep, onSelectStep }: KBankPhon
 
                 {/* State 2: Probabilistic Cash-Flow Runway */}
                 {activeStep === 1 && (
-                  <div className="animate-fadeIn">
+                  <div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs font-bold text-slate-800">Financial Runway</span>
+                      <span className="text-xs font-bold text-slate-800">Financial Runway Intelligence</span>
                       <span className="text-[10px] font-bold text-[#00A950] bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
                         85% Safe Zone
                       </span>
@@ -157,11 +165,11 @@ export default function KBankPhoneMockup({ activeStep, onSelectStep }: KBankPhon
                     <div className="grid grid-cols-2 gap-2 text-xs bg-slate-50 p-2 rounded-xl border border-slate-100">
                       <div>
                         <div className="text-[10px] text-slate-500">Burn Rate แนะนำ</div>
-                        <div className="font-bold text-slate-900">฿420 / วัน</div>
+                        <div className="font-bold text-slate-900">฿380 / วัน</div>
                       </div>
                       <div>
                         <div className="text-[10px] text-slate-500">เงินเดือนออกใน</div>
-                        <div className="font-bold text-emerald-700">18 วัน (28 ก.ย.)</div>
+                        <div className="font-bold text-[#00A950]">18 วัน (28 ก.ย.)</div>
                       </div>
                     </div>
                   </div>
@@ -169,21 +177,21 @@ export default function KBankPhoneMockup({ activeStep, onSelectStep }: KBankPhon
 
                 {/* State 3: Safe-to-Sweep Detection & Recommendation */}
                 {activeStep === 2 && (
-                  <div className="animate-fadeIn">
+                  <div>
                     <div className="flex items-center justify-between mb-1.5">
-                      <span className="text-[11px] font-bold text-slate-700">ตรวจพบเงินเย็นวันนี้</span>
+                      <span className="text-[11px] font-bold text-slate-700">ตรวจพบเงินเย็นปลอดภัยวันนี้</span>
                       <span className="text-base font-extrabold text-[#00A950]">฿150.00</span>
                     </div>
                     
                     <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-2 text-xs mb-2">
-                      <div className="font-bold text-emerald-900 text-[11px]">แนะนำ Action กระทบน้อยสุด:</div>
+                      <div className="font-bold text-[#008744] text-[11px]">Least-Disruptive Action:</div>
                       <div className="text-slate-700 text-[11px] mt-0.5">
-                        ลด Food Delivery ฿80/วัน ดัน Safe Zone เป็น 92%
+                        ลดชานม/Delivery ฿80/วัน ดัน Safe Zone เป็น 92%
                       </div>
                     </div>
 
                     <div className="text-[11px] text-slate-600 flex items-center justify-between font-medium">
-                      <span>เป้าหมาย: Pocket เที่ยวญี่ปุ่น</span>
+                      <span>เป้าหมาย: เงินสำรองฉุกเฉินก้อนแรก</span>
                       <span className="text-[#00A950] font-bold">เร็วขึ้น 3 วัน</span>
                     </div>
                   </div>
@@ -191,7 +199,7 @@ export default function KBankPhoneMockup({ activeStep, onSelectStep }: KBankPhon
 
                 {/* State 4: User Approval with Bounded Consent */}
                 {activeStep === 3 && (
-                  <div className="animate-fadeIn">
+                  <div>
                     <div className="text-xs font-bold text-slate-800 mb-1">
                       อนุมัติการออม (Co-pilot Approval)
                     </div>
@@ -227,15 +235,15 @@ export default function KBankPhoneMockup({ activeStep, onSelectStep }: KBankPhon
 
                 {/* State 5: Liquidity Shield & Multi-tier Routing */}
                 {activeStep === 4 && (
-                  <div className="animate-fadeIn">
-                    <div className="flex items-center gap-1.5 text-xs font-bold text-emerald-700 mb-1">
+                  <div>
+                    <div className="flex items-center gap-1.5 text-xs font-bold text-[#00A950] mb-1">
                       <CheckCircle2 className="w-4 h-4 text-[#00A950]" />
                       <span>โอน ฿150 เข้า K-eSavings สำเร็จ!</span>
                     </div>
 
                     <div className="bg-slate-50 border border-slate-100 rounded-xl p-2 text-[11px] mb-2 text-slate-600">
                       <div className="font-bold text-slate-800">Liquidity Shield คุ้มกัน ฿1,000 เสมอ</div>
-                      <div>ระบบดึงเงินกลับอัตโนมัติหากมีบิลด่วนฉุกเฉิน</div>
+                      <div>Reverse Sweep ดึงเงินกลับอัตโนมัติหากมีบิลด่วน</div>
                     </div>
 
                     <button

@@ -9,30 +9,40 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-white border-t border-slate-200 text-slate-500 text-xs py-12">
+    <footer className="bg-white border-t border-emerald-100 text-slate-500 text-xs py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
           
-          {/* Col 1 */}
+          {/* Col 1: Brand with KbankWebIcon.png */}
           <div className="md:col-span-2 space-y-3">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-[#00A950] flex items-center justify-center text-white font-extrabold text-sm">
-                <span>K<span className="text-emerald-200">+</span></span>
+            <div className="flex items-center gap-3">
+              <div className="h-10 w-10 overflow-hidden rounded-xl bg-slate-50 flex items-center justify-center p-1 border border-slate-200 shrink-0">
+                <img
+                  src="/KbankWebIcon.png"
+                  alt="KBank Web Icon"
+                  className="h-full w-full object-contain"
+                />
               </div>
-              <span className="font-extrabold text-slate-900 text-base">
-                K-Runway & Auto-Save
-              </span>
+              <div>
+                <span className="font-extrabold text-slate-900 text-base">
+                  K-Runway <span className="text-[#00A950]">&</span> Auto-Save
+                </span>
+                <div className="text-[10px] font-bold text-[#00A950] tracking-wider uppercase">
+                  K PLUS Innovation Concept
+                </div>
+              </div>
             </div>
             <p className="text-slate-600 text-xs leading-relaxed max-w-md">
-              โครงการนำเสนอแนวคิดนวัตกรรม FinTech: การผสานระหว่าง Financial Runway Intelligence และ Intelligent Auto-Save Engine สำหรับพัฒนาประสบการณ์แอป K PLUS
+              โครงการนำเสนอแนวคิดนวัตกรรม Data Science & Predictive Analytics: การผสานระหว่าง Financial Runway Intelligence และ Intelligent Auto-Save Engine ช่วยให้ First Jobbers สามารถตัดสินใจทางการเงินได้อย่างมั่นใจ
             </p>
-            <div className="text-[11px] text-[#008744] font-medium">
-              Concept Prototype for Demonstration Purposes
+            <div className="text-[11px] text-[#008744] font-semibold flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#00A950]" />
+              <span>Data Science Solution for First Jobbers • KBTG Innovation</span>
             </div>
           </div>
 
-          {/* Col 2 */}
+          {/* Col 2: Navigation Links */}
           <div>
             <h4 className="font-bold text-slate-900 uppercase text-[11px] tracking-wider mb-3">
               โครงสร้างเนื้อหา
@@ -40,42 +50,43 @@ export default function Footer() {
             <ul className="space-y-2 text-xs">
               <li>
                 <a href="#problem" className="hover:text-[#00A950] transition-colors">
-                  01. ปัญหา (Pain Points)
+                  01. ปัญหาของ First Jobbers
                 </a>
               </li>
               <li>
                 <a href="#how-it-works" className="hover:text-[#00A950] transition-colors">
-                  02. Scrollytelling 5 ขั้นตอน
+                  02. ขั้นตอนการทำงาน 5 ขั้นตอน
                 </a>
               </li>
               <li>
                 <a href="#features" className="hover:text-[#00A950] transition-colors">
-                  03. 2 เสาหลักนวัตกรรม
-                </a>
-              </li>
-              <li>
-                <a href="#simulator" className="hover:text-[#00A950] transition-colors">
-                  04. เครื่องคำนวณ Runway
+                  03. 2 เสาหลักนวัตกรรม AI
                 </a>
               </li>
               <li>
                 <a href="#security" className="hover:text-[#00A950] transition-colors">
-                  05. ความปลอดภัย & PDPA
+                  04. ความปลอดภัย & PDPA
+                </a>
+              </li>
+              <li>
+                <a href="#concept" className="hover:text-[#00A950] transition-colors">
+                  05. K PLUS Innovation Concept
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Col 3 */}
+          {/* Col 3: Technology */}
           <div>
             <h4 className="font-bold text-slate-900 uppercase text-[11px] tracking-wider mb-3">
-              เทคโนโลยี
+              สถาปัตยกรรมเทคโนโลยี
             </h4>
             <ul className="space-y-2 text-xs text-slate-600">
+              <li>• Data Science & Time-Series ML</li>
+              <li>• Monte Carlo Probabilistic Sim</li>
+              <li>• Least-Disruptive Intervention (LDI)</li>
               <li>• Next.js & React (TypeScript)</li>
-              <li>• Tailwind CSS & KBank Theme</li>
-              <li>• Native Sticky & Intersection Observer</li>
-              <li>• Lucide React Icons</li>
+              <li>• Tailwind CSS & KBank Palette</li>
             </ul>
           </div>
 
@@ -84,12 +95,12 @@ export default function Footer() {
         {/* Bottom */}
         <div className="pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
           <div>
-            © 2026 K-Runway & Auto-Save Showcase. Designed for K PLUS Innovation Exploration.
+            © 2026 K-Runway & Auto-Save Showcase. Designed for KBTG Data Science Track Innovation.
           </div>
 
           <button
             onClick={scrollToTop}
-            className="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors flex items-center gap-1 text-xs"
+            className="p-2 rounded-lg bg-slate-100 hover:bg-emerald-50 text-slate-700 hover:text-[#00A950] transition-colors flex items-center gap-1.5 text-xs font-semibold"
           >
             <ArrowUp className="w-3.5 h-3.5" />
             <span>กลับขึ้นด้านบน</span>
