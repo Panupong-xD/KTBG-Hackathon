@@ -1,0 +1,75 @@
+'use client';
+
+import React from 'react';
+import { Check, ArrowRight } from 'lucide-react';
+import { ScrollyStep } from '../data/scrollySteps';
+
+interface StepCardProps {
+  step: ScrollyStep;
+  isActive: boolean;
+  onActivate: () => void;
+}
+
+export default function StepCard({ step, isActive, onActivate }: StepCardProps) {
+  return (
+    <div
+      onClick={onActivate}
+      className={`group relative rounded-2xl p-6 sm:p-8 transition-all duration-300 cursor-pointer border ${
+        isActive
+          ? 'bg-white border-[#00A950] shadow-md ring-1 ring-[#00A950]/20'
+          : 'bg-white/80 hover:bg-white border-slate-200 hover:border-slate-300 shadow-sm'
+      }`}
+    >
+      {/* Active Left Indicator */}
+      {isActive && (
+        <div className="absolute -left-1 top-6 bottom-6 w-1.5 bg-[#00A950] rounded-full" />
+      )}
+
+      {/* Header: Step Number & Tech Badge */}
+      <div className="flex items-center justify-between gap-3 mb-3">
+        <span
+          className={`font-mono text-xs font-bold px-2.5 py-1 rounded-md transition-colors ${
+            isActive
+              ? 'bg-[#00A950] text-white'
+              : 'bg-slate-100 text-slate-600 group-hover:bg-slate-200'
+          }`}
+        >
+          Step {step.stepNumber}
+        </span>
+        <span className="text-xs font-medium text-slate-500 bg-slate-50 px-2.5 py-1 rounded-full border border-slate-200">
+          {step.techBadge}
+        </span>
+      </div>
+
+      {/* Title */}
+      <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 leading-snug">
+        {step.title}
+      </h3>
+
+      {/* Description */}
+      <p className="text-sm text-slate-600 leading-relaxed mb-5">
+        {step.description}
+      </p>
+
+      {/* Key Highlights */}
+      <div className="space-y-1.5 mb-5">
+        {step.details.map((detail, idx) => (
+          <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
+            <Check className="w-4 h-4 text-[#00A950] shrink-0 mt-0.5" />
+            <span>{detail}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* Metrics Row */}
+      <div className="grid grid-cols-3 gap-2 pt-4 border-t border-slate-100">
+        {step.metrics.map((m, idx) => (
+          <div key={idx} className="bg-slate-50 rounded-xl p-2.5 border border-slate-100">
+            <div className="text-[11px] text-slate-500">{m.label}</div>
+            <div className="text-sm font-bold text-slate-900 mt-0.5">{m.value}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
