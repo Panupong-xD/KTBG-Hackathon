@@ -297,6 +297,9 @@
   .top-0 {
     top: 0px;
   }
+  .top-1\/2 {
+    top: calc(1 / 2 * 100%);
+  }
   .top-2\.5 {
     top: calc(var(--spacing) * 2.5);
   }
@@ -461,9 +464,6 @@
   }
   .mb-10 {
     margin-bottom: calc(var(--spacing) * 10);
-  }
-  .mb-12 {
-    margin-bottom: calc(var(--spacing) * 12);
   }
   .mb-14 {
     margin-bottom: calc(var(--spacing) * 14);
@@ -694,6 +694,10 @@
     --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+  .-translate-y-1\/2 {
+    --tw-translate-y: calc(calc(1 / 2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .-rotate-90 {
     rotate: calc(90deg * -1);
   }
@@ -783,6 +787,9 @@
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
+  }
+  .gap-7 {
+    gap: calc(var(--spacing) * 7);
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
@@ -1081,9 +1088,6 @@
   .bg-\[\#00A950\]\/10 {
     background-color: color-mix(in oklab, #00A950 10%, transparent);
   }
-  .bg-\[\#00A950\]\/15 {
-    background-color: color-mix(in oklab, #00A950 15%, transparent);
-  }
   .bg-\[\#1C3A43\] {
     background-color: #1C3A43;
   }
@@ -1175,12 +1179,6 @@
     background-color: color-mix(in srgb, oklch(97.9% 0.021 166.113) 30%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-emerald-50) 30%, transparent);
-    }
-  }
-  .bg-emerald-50\/40 {
-    background-color: color-mix(in srgb, oklch(97.9% 0.021 166.113) 40%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-emerald-50) 40%, transparent);
     }
   }
   .bg-emerald-50\/60 {
@@ -2188,17 +2186,8 @@
     .md\:col-span-2 {
       grid-column: span 2 / span 2;
     }
-    .md\:flex {
-      display: flex;
-    }
-    .md\:hidden {
-      display: none;
-    }
     .md\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    .md\:grid-cols-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     .md\:grid-cols-4 {
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2213,6 +2202,9 @@
     }
     .lg\:block {
       display: block;
+    }
+    .lg\:flex {
+      display: flex;
     }
     .lg\:hidden {
       display: none;
@@ -2249,6 +2241,11 @@
     .lg\:text-6xl {
       font-size: var(--text-6xl);
       line-height: var(--tw-leading, var(--text-6xl--line-height));
+    }
+  }
+  @media (width >= 80rem) {
+    .xl\:gap-9 {
+      gap: calc(var(--spacing) * 9);
     }
   }
 }

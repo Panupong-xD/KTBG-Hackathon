@@ -16,7 +16,8 @@ export default function InnovationConcept() {
           </span>
 
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
-            พร้อมเปลี่ยนพฤติกรรมการเงินของ First Jobbers <br />
+            พร้อมเปลี่ยนพฤติกรรมการเงินของ<br />
+            " First Jobbers " <br />
             ด้วย AI ที่รู้ใจคุณแล้วหรือยัง?
           </h2>
 

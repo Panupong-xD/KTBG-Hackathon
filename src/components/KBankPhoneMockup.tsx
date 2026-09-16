@@ -74,25 +74,25 @@ export default function KBankPhoneMockup({ activeStep, onSelectStep }: KBankPhon
           </div>
 
           {/* K PLUS App Top Header */}
-          <div className="px-5 py-2 flex items-center justify-between z-20 shrink-0">
+          <div className="relative px-5 py-2.5 flex items-center justify-between z-20 shrink-0">
             {/* User Avatar with KBank Green Accent Ring */}
-            <div className="w-9 h-9 rounded-full bg-[#00A950] p-0.5 shadow-sm">
+            <div className="w-9 h-9 rounded-full bg-[#00A950] p-0.5 shadow-sm shrink-0">
               <div className="w-full h-full rounded-full bg-[#1C3A43] flex items-center justify-center text-xs font-bold text-white overflow-hidden">
-                <span className="text-[11px] font-bold">FJ</span>
+                <span className="text-[11px] font-bold tracking-tight">K+</span>
               </div>
             </div>
 
-            {/* Centered KBank App Icon (KbankAppIcon.svg replacing text K+) */}
-            <div className="flex items-center justify-center">
+            {/* Perfectly Centered KBank App Icon (Absolute positioned to ensure true horizontal center) */}
+            <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none">
               <img
                 src="/KbankAppIcon.svg"
                 alt="KBank App Icon"
-                className="w-7 h-7 rounded-lg shadow-sm"
+                className="w-9 h-9 rounded-xl shadow-md"
               />
             </div>
 
             {/* Right Icons: Bell with Notification Badge & Power */}
-            <div className="flex items-center gap-3 text-slate-200">
+            <div className="flex items-center gap-3 text-slate-200 shrink-0">
               <div className="relative cursor-pointer">
                 <Bell className="w-5 h-5" />
                 <span className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-[#FF3B30] text-white text-[9px] font-bold rounded-full flex items-center justify-center">
@@ -123,7 +123,7 @@ export default function KBankPhoneMockup({ activeStep, onSelectStep }: KBankPhon
                   <div>
                     <div className="flex items-start justify-between mb-2">
                       <div>
-                        <div className="text-[11px] font-semibold text-slate-500">เงินเดือน First Jobber วิเคราะห์แล้ว</div>
+                        <div className="text-[11px] font-semibold text-slate-500">ยอดเงินคงเหลือ (วิเคราะห์แล้ว)</div>
                         <div className="text-lg font-extrabold text-slate-900">฿32,500.00</div>
                       </div>
                       <span className="text-[10px] font-bold text-[#00A950] bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
@@ -133,13 +133,13 @@ export default function KBankPhoneMockup({ activeStep, onSelectStep }: KBankPhon
 
                     <div className="space-y-1.5 text-xs">
                       <div className="flex items-center justify-between bg-slate-50 p-1.5 rounded-lg border border-slate-100">
-                        <span className="text-slate-600 font-medium truncate">ค่าเช่าหอพักใกล้ออฟฟิศ</span>
+                        <span className="text-slate-600 font-medium truncate">ค่าเช่าที่พัก</span>
                         <span className="text-[10px] bg-blue-100 text-blue-800 font-bold px-1.5 py-0.2 rounded shrink-0">
                           Fixed -฿7,500
                         </span>
                       </div>
                       <div className="flex items-center justify-between bg-slate-50 p-1.5 rounded-lg border border-slate-100">
-                        <span className="text-slate-600 font-medium truncate">ช้อปปิ้ง & เลี้ยงฉลองงานใหม่</span>
+                        <span className="text-slate-600 font-medium truncate">ช้อปปิ้ง & อาหาร</span>
                         <span className="text-[10px] bg-amber-100 text-amber-800 font-bold px-1.5 py-0.2 rounded shrink-0">
                           Discretionary -฿1,420
                         </span>
@@ -152,7 +152,7 @@ export default function KBankPhoneMockup({ activeStep, onSelectStep }: KBankPhon
                 {activeStep === 1 && (
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs font-bold text-slate-800">Financial Runway Intelligence</span>
+                      <span className="text-xs font-bold text-slate-800">Financial Runway</span>
                       <span className="text-[10px] font-bold text-[#00A950] bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
                         85% Safe Zone
                       </span>
@@ -191,7 +191,7 @@ export default function KBankPhoneMockup({ activeStep, onSelectStep }: KBankPhon
                     </div>
 
                     <div className="text-[11px] text-slate-600 flex items-center justify-between font-medium">
-                      <span>เป้าหมาย: เงินสำรองฉุกเฉินก้อนแรก</span>
+                      <span>เป้าหมาย: เงินสำรองฉุกเฉิน</span>
                       <span className="text-[#00A950] font-bold">เร็วขึ้น 3 วัน</span>
                     </div>
                   </div>

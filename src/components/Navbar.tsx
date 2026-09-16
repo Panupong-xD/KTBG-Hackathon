@@ -26,16 +26,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Brand Logo with KbankWebIcon.png */}
-          <div className="flex items-center gap-3">
+          {/* Brand Logo with KbankWebIcon.png (Clean, no background container, no border) */}
+          <div className="flex items-center gap-3 shrink-0">
             <a href="#" className="flex items-center gap-3 group">
-              <div className="h-10 w-10 overflow-hidden rounded-xl bg-slate-50 flex items-center justify-center p-1 border border-slate-200 group-hover:scale-105 transition-transform">
-                <img
-                  src="/KbankWebIcon.png"
-                  alt="KBank Web Icon"
-                  className="h-full w-full object-contain"
-                />
-              </div>
+              <img
+                src="/KbankWebIcon.png"
+                alt="KBank Web Icon"
+                className="h-10 w-10 object-contain group-hover:scale-105 transition-transform shrink-0"
+              />
               <div className="flex flex-col">
                 <div className="font-extrabold text-slate-900 text-base sm:text-lg tracking-tight leading-none flex items-center gap-1.5">
                   <span>K-Runway</span>
@@ -45,46 +43,46 @@ export default function Navbar() {
                 <div className="flex items-center gap-1.5 mt-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#00A950]" />
                   <span className="text-[10px] font-bold text-[#00A950] tracking-wider uppercase">
-                    Data Science Track • K PLUS Innovation
+                    K PLUS Innovation
                   </span>
                 </div>
               </div>
             </a>
           </div>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+          {/* Desktop Navigation Links (Spacious, elegant, non-cramped) */}
+          <nav className="hidden lg:flex items-center gap-7 xl:gap-9 text-sm font-medium text-slate-600">
             <a href="#problem" className="hover:text-[#00A950] transition-colors">
-              ปัญหาของ First Jobbers
+              ปัญหาที่พบ
             </a>
-            <a href="#how-it-works" className="hover:text-[#00A950] transition-colors flex items-center gap-1">
+            <a href="#how-it-works" className="hover:text-[#00A950] transition-colors flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#00A950]" />
               <span>ขั้นตอนการทำงาน</span>
             </a>
             <a href="#features" className="hover:text-[#00A950] transition-colors">
-              2 เสาหลัก AI
+              สถาปัตยกรรม AI
             </a>
             <a href="#security" className="hover:text-[#00A950] transition-colors">
-              ความปลอดภัย & PDPA
+              ความปลอดภัย
             </a>
             <a href="#concept" className="hover:text-[#00A950] transition-colors">
-              Concept Showcase
+              Concept
             </a>
           </nav>
 
           {/* Right Action CTA Button */}
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden sm:flex items-center gap-3 shrink-0">
             <a
               href="#how-it-works"
-              className="kbank-btn px-5 py-2.5 text-xs font-bold rounded-xl shadow-sm hover:brightness-105 flex items-center gap-1.5 transition-all"
+              className="kbank-btn px-4 py-2 text-xs font-bold rounded-xl shadow-sm hover:brightness-105 flex items-center gap-1.5 transition-all"
             >
-              <span>ดูขั้นตอนการทำงาน</span>
+              <span>ทดลอง Walkthrough</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex md:hidden">
+          <div className="flex lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-lg text-slate-700 hover:text-[#00A950]"
@@ -98,41 +96,41 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-b border-emerald-100 px-4 pt-2 pb-6 space-y-3">
+        <div className="lg:hidden bg-white border-b border-emerald-100 px-4 pt-2 pb-6 space-y-3">
           <a
             href="#problem"
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 text-sm font-semibold text-slate-700 hover:text-[#00A950]"
           >
-            ปัญหาของ First Jobbers (Pain Points)
+            ปัญหาที่พบ (Pain Points)
           </a>
           <a
             href="#how-it-works"
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 text-sm font-semibold text-slate-700 hover:text-[#00A950]"
           >
-            ขั้นตอนการทำงาน (Scrollytelling)
+            ขั้นตอนการทำงาน (Walkthrough)
           </a>
           <a
             href="#features"
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 text-sm font-semibold text-slate-700 hover:text-[#00A950]"
           >
-            2 เสาหลักนวัตกรรม AI
+            สถาปัตยกรรม AI
           </a>
           <a
             href="#security"
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 text-sm font-semibold text-slate-700 hover:text-[#00A950]"
           >
-            ความปลอดภัย & PDPA
+            ความปลอดภัย
           </a>
           <a
             href="#concept"
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 text-sm font-semibold text-slate-700 hover:text-[#00A950]"
           >
-            Concept Showcase
+            Concept
           </a>
           <div className="pt-2">
             <a
@@ -140,7 +138,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center py-2.5 rounded-xl kbank-btn text-xs font-bold block"
             >
-              ดูขั้นตอนการทำงาน
+              ทดลอง Walkthrough
             </a>
           </div>
         </div>
