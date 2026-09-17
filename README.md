@@ -1,6 +1,7 @@
 # K-Runway & Predictive Auto-Saving
-> **K PLUS Innovation Concept for First Jobbers**  
-> *Data Science & Predictive Cash-Flow Intelligence Showcase — KBTG Hackathon*
+
+> **K PLUS Innovation Architecture for First Jobbers**  
+> Data Science & Predictive Cash-Flow Intelligence Showcase — KBTG Hackathon
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.3.5-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.3.0-blue?style=flat-square&logo=react)](https://react.dev/)
@@ -10,26 +11,28 @@
 
 ---
 
-## 📌 Executive Summary
+## Overview & Innovation Thesis
 
-**K-Runway & Predictive Auto-Saving** is a flagship innovation concept designed for the **K PLUS** mobile banking ecosystem, specifically engineered to solve the chronic financial friction faced by **First Jobbers**. 
+**K-Runway & Predictive Auto-Saving** is an enterprise-grade financial architecture proposed for the **K PLUS** mobile banking platform. It addresses the systemic liquidity vulnerabilities experienced by **First Jobbers** during their transition into early-career financial autonomy.
 
-Instead of treating a mobile banking app as a passive *"rearview mirror"* of past transactions, this system transforms K PLUS into an active, intelligent **"30-Day Forward-Looking Financial Co-pilot"**.
+Traditional retail banking applications operate almost exclusively in a retrospective manner, presenting static current balances and historical transaction ledgers. This system shifts the operational paradigm from backward-looking record-keeping to **forward-looking predictive cash-flow co-piloting**.
 
-By synthesizing **Time-Series Machine Learning, Monte Carlo Probabilistic Simulation**, and **Least-Disruptive Intervention (LDI)** algorithms, the platform predicts cash-flow trajectory weeks in advance, protects users from month-end liquidity crashes, and automatically sweeps safe micro-surpluses into high-yield savings under strict **Bounded Consent** rules.
-
----
-
-## 🎯 The First Jobber Dilemma (Core Pain Points)
-
-1. **Static Balance Trap**: A user sees ฿15,000 in their checking account and assumes they are financially safe. In reality, fixed obligations (rent, utilities, credit cards) totaling ฿12,000 are scheduled over the next 18 days.
-2. **Income & Lifestyle Volatility**: Rigid budgeting models (e.g., Fixed 50/30/20) fail because early-career professionals experience volatile social expenses and unpredictable discretionary spikes.
-3. **Present Bias & Failed Savings**: Waiting to save whatever is left at month-end yields ฿0. Conversely, aggressive fixed auto-debits risk overdrafting the account, forcing users to liquidate savings prematurely.
-4. **Blind, Non-Actionable Advice**: Traditional banking notifications issue generic warnings like *"You should save more"*, without quantifying where, when, and how much to adjust without degrading quality of life.
+By integrating **Time-Series Classification**, **Monte Carlo Probabilistic Trajectory Forecasting**, and **Least-Disruptive Intervention (LDI)** algorithms, the platform predicts 30-day liquidity runways, eliminates month-end overdraft hazards, and automatically siphons verified micro-surpluses into high-yield savings under strict **Bounded Consent** protocols.
 
 ---
 
-## ⚡ 2 Core AI Pillars (Architecture Overview)
+## Problem Statement: First Jobber Financial Fragility
+
+Early-career professionals encounter four recurring behavioral and structural financial bottlenecks:
+
+1. **Static Balance Trap**: Checking accounts display an aggregated balance (e.g., ฿15,000) that gives a false sense of solvency, failing to deduct impending fixed obligations (dormitory rent, utility bills, card settlements) totaling ฿12,000 due over the following 18 days.
+2. **Income & Discretionary Volatility**: Strict heuristic budgeting models (such as fixed 50/30/20 distributions) collapse because early-career social commitments and unexpected onboarding expenses do not follow uniform distributions.
+3. **Present Bias & Ineffective Accumulation**: Deferring savings until month-end consistently results in zero capital accumulation. Conversely, rigid calendar-based auto-debits introduce overdraft risks, prompting early liquidation of reserve funds.
+4. **Non-Actionable Advisory Systems**: Traditional banking advisory notifications offer generic recommendations without quantifying specific spending adjustments or assessing their impact on day-to-day welfare.
+
+---
+
+## Dual-Pillar AI Architecture
 
 ```
                        [ K PLUS DATA SCIENCE ENGINE ]
@@ -38,58 +41,58 @@ By synthesizing **Time-Series Machine Learning, Monte Carlo Probabilistic Simula
          |                                                       |
  [ PILLAR 01 : THE BRAIN ]                               [ PILLAR 02 : THE ACTUATOR ]
       Dynamic Runway                                      Micro-Surplus Sweeping
- (Predictive Altitude Radar)                             (Checking to Locked Vault)
+ (Predictive Telemetry Engine)                           (Checking to Locked Vault)
          |                                                       |
-  • Monte Carlo 10,000 Sim                                • Daily Budget (฿380/day)
-  • Dynamic Daily Burn Rate                               • Micro-Surplus (+฿150)
-  • Early Warning Crash Protection                        • Hard Floor Shield (฿1,000)
-  • Safe Zone Touchdown (Day 30)                          • Reverse Sweep (Auto-Refund)
+  • Monte Carlo 10,000 Sim                                • Daily Budget Calibration (฿380)
+  • Dynamic Daily Burn Rate                               • Micro-Surplus Detection (+฿150)
+  • Early Warning Horizon (Day 21)                        • Hard Floor Reserve (฿1,000)
+  • Safe Zone Touchdown (Day 30)                          • Reverse Sweep Circuit (Auto-Refund)
 ```
 
-### Pillar 01: Dynamic Runway (The Brain)
-- **Monte Carlo & Bayesian Time-Series**: Simulates 10,000 forward-looking financial scenarios, integrating pending bills and discretionary volatility into a single probabilistic trajectory.
-- **Safe-to-Spend Calibration**: Continuously calculates an adaptive daily operating budget (e.g., ฿380/day).
-- **Early Warning Horizon**: Detects cash-flow exhaustion risks 7–14 days in advance, preventing the typical Day 21 month-end financial crash.
+### Pillar 01: Dynamic Runway (Predictive Telemetry Engine)
+- **Monte Carlo & Bayesian Forecasting**: Executes 10,000 forward simulations across every billing cycle, factoring in scheduled commitments, probabilistic recurring expenses, and historical variance.
+- **Adaptive Daily Burn Rate**: Dynamically calculates a safe-to-spend daily operating budget (e.g., ฿380/day) that flexes according to remaining days and upcoming obligations.
+- **Early Warning Horizon**: Flags impending cash-flow inflection points 7 to 14 days in advance, mitigating the typical Day 21 month-end liquidity drop before the danger zone (sub-฿1,000) is breached.
 
-### Pillar 02: Micro-Surplus Sweeping & Shield (The Actuator)
-- **Safe-to-Sweep Detection**: Identifies idle daily micro-surpluses (e.g., ฿150) that can be safely siphoned without triggering liquidity stress.
-- **High-Yield Vault Accumulation**: Sweeps idle funds into an interest-bearing account (e.g., K-eSavings at 1.50% p.a.).
-- **Hard Floor ฿1,000 Protection**: Establishes an untouchable liquidity buffer at the bottom of the checking account.
-- **Reverse Sweep Circuit**: If unexpected emergency debits arrive, funds are instantly swept back into checking, guaranteeing a **100% Zero-Overdraft Protection**.
+### Pillar 02: Micro-Surplus Sweeping & Shield (Automated Execution Circuit)
+- **Safe-to-Sweep Siphoning**: Isolates unencumbered surplus capital (e.g., ฿150/day) that can be removed from daily checking without altering routine lifestyle patterns.
+- **High-Yield Target Account**: Directs accumulated capital into an interest-bearing account (K-eSavings at 1.50% p.a.).
+- **Hard Floor Liquidity Anchor**: Establishes a strict ฿1,000 baseline reserve in the primary checking account that is permanently preserved.
+- **Reverse Sweep Circuit**: If sudden mandatory debits or unexpected expenditures occur, funds in the savings vault are automatically swept back to checking, enforcing a **Zero-Overdraft Guarantee**.
 
 ---
 
-## 📱 5-Step System Flow (Scrollytelling Walkthrough)
+## 5-Phase End-to-End System Pipeline
 
-| Step | Phase | Core Data Science Technology | User Benefit |
+| Phase | Designation | Core Algorithmic Framework | Operational Output |
 | :---: | :--- | :--- | :--- |
-| **01** | **Data Ingestion & Parsing** | Time-Series Classification & NLP Parsing | Automatically segments transactions into Fixed Obligations vs. Discretionary Spikes with 98.4% accuracy. |
-| **02** | **Cash-Flow Runway** | Monte Carlo Simulation & Bayesian Forecasting | Quantifies survival probability into a clean % (Safe Zone 85%) and counts down days until next payday. |
-| **03** | **Safe-to-Sweep & LDI** | Least-Disruptive Intervention (LDI) Engine | Isolates safe surplus (e.g., ฿150) and recommends minimal-impact spending adjustments. |
-| **04** | **Co-pilot Consent** | Bounded Consent & PDPA Governance | 100% Human-in-the-loop. Users set caps, review proposals, and retain full policy control. |
-| **05** | **Liquidity Shield** | Bi-directional Automated Sweeping Circuit | Automated accumulation at 1.50% p.a. with instantaneous Reverse Sweep defense for unexpected charges. |
+| **01** | **Data Ingestion & Parsing** | Time-Series Classification & NLP Parser | Categorizes transactions into Fixed Obligations vs. Discretionary Spikes with 98.4% model accuracy. |
+| **02** | **Cash-Flow Runway** | Monte Carlo Simulation & Bayesian Forecasting | Projects survival probability into a quantified Safe Zone percentage (85%) alongside a real-time payday countdown. |
+| **03** | **Safe-to-Sweep & LDI** | Least-Disruptive Intervention (LDI) Engine | Detects idle micro-surpluses and computes targeted spending adjustments that produce maximum liquidity with minimal lifestyle disruption. |
+| **04** | **Co-pilot Consent** | Bounded Consent & PDPA Governance | Requires explicit user authorization for transaction parameters, maintaining human-in-the-loop oversight. |
+| **05** | **Liquidity Shield** | Bi-directional Automated Sweeping Circuit | Executes daily micro-accumulation at 1.50% p.a. yield with automated Reverse Sweep recovery when required. |
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack & Architecture
 
-- **Framework**: [Next.js 16 (Turbopack, App Router)](https://nextjs.org/)
-- **Frontend Core**: [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) + PostCSS + KBank Design Palette
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Motion & Micro-interactions**: [Framer Motion](https://www.framer.com/motion/)
-- **Typography**: Google Fonts Prompt with Cross-Platform DirectWrite/CoreText Word-Break Prevention
-- **Deployment**: [Vercel Edge Network](https://vercel.com/)
+- **Web Framework**: Next.js 16.3.5 (Turbopack, React Server Components, App Router)
+- **Application Core**: React 19.3.0 with TypeScript 7.0
+- **Styling Architecture**: Tailwind CSS v4.3.3 with PostCSS and custom KBank brand tokenization
+- **Vector Graphics**: Frameless SVG Infographics with optimized DirectWrite / CoreText typography alignment
+- **Motion & Transitions**: Framer Motion 13.4.0
+- **Iconography**: Lucide React 1.46.0
+- **Deployment**: Vercel Edge Global Infrastructure
 
 ---
 
-## 🚀 Getting Started
+## Local Development & Build Verification
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) v18.18.0 or later
-- npm v9 or later
+- Node.js v18.18.0 or higher
+- npm v9.0.0 or higher
 
-### 1. Clone the Repository
+### 1. Clone Repository
 ```bash
 git clone https://github.com/Panupong-xD/KTBG-Hackathon.git
 cd KTBG-Hackathon
@@ -100,13 +103,13 @@ cd KTBG-Hackathon
 npm install
 ```
 
-### 3. Start Local Development Server
+### 3. Run Development Server
 ```bash
 npm run dev
 ```
-Open **[http://localhost:3000](http://localhost:3000)** in your browser.
+The application will be accessible at `http://localhost:3000`.
 
-### 4. Build for Production
+### 4. Production Build & Execution
 ```bash
 npm run build
 npm run start
@@ -114,35 +117,35 @@ npm run start
 
 ---
 
-## 📁 Repository Structure
+## Directory Structure
 
 ```
-├── public/                     # Static brand assets (Favicons, KBank icons, logos)
+├── public/                     # Static brand assets and favicons
 ├── scripts/
-│   └── build-css.mjs           # Custom Tailwind CSS v4 candidate extraction & build engine
+│   └── build-css.mjs           # Tailwind CSS v4 compiler and candidate generator
 ├── src/
 │   ├── app/
-│   │   ├── layout.tsx          # Root Layout & Typography configuration
-│   │   ├── page.tsx            # Main Landing Page composition
-│   │   └── globals.css         # Generated Tailwind CSS & KBank brand styles
+│   │   ├── layout.tsx          # Root layout and font configurations
+│   │   ├── page.tsx            # Main application landing page
+│   │   └── globals.css         # Compiled design system and styling tokens
 │   ├── components/
-│   │   ├── Navbar.tsx          # Sticky Header Navigation
-│   │   ├── Hero.tsx            # Hero Headline & Value Proposition
-│   │   ├── ProblemGrid.tsx     # 4 Core Problems of First Jobbers
-│   │   ├── Scrollytelling.tsx  # 5-Step Interactive Walkthrough
-│   │   ├── KBankPhoneMockup.tsx# High-fidelity iPhone Mockup with interactive UI states
-│   │   ├── FeatureDeepDive.tsx # 2 AI Superpowers Infographics (Frameless SVG)
-│   │   ├── TrustSecurityBanner.tsx # Bank-Grade Security & PDPA Governance
-│   │   ├── InnovationConcept.tsx # Summary & Early Prototype Showcase
-│   │   ├── Footer.tsx          # Project Footer & Technology Credits
-│   │   └── phone-screens/      # 5 Realistic Interactive Mobile Screens
+│   │   ├── Navbar.tsx          # Navigation header
+│   │   ├── Hero.tsx            # Primary value proposition and headline
+│   │   ├── ProblemGrid.tsx     # First Jobber structural challenge overview
+│   │   ├── Scrollytelling.tsx  # 5-phase interactive phone simulation
+│   │   ├── KBankPhoneMockup.tsx# High-fidelity mobile interface viewport
+│   │   ├── FeatureDeepDive.tsx # Dual AI pillar technical infographics
+│   │   ├── TrustSecurityBanner.tsx # Compliance, privacy, and encryption specifications
+│   │   ├── InnovationConcept.tsx # Institutional innovation summary
+│   │   ├── Footer.tsx          # Platform metadata and acknowledgments
+│   │   └── phone-screens/      # Individual interactive screen implementations
 │   │       ├── Screen1Data.tsx
 │   │       ├── Screen2Runway.tsx
 │   │       ├── Screen3SafeSweep.tsx
 │   │       ├── Screen4Consent.tsx
 │   │       └── Screen5Shield.tsx
 │   └── data/
-│       └── scrollySteps.ts     # Data Science step definitions & quantitative metrics
+│       └── scrollySteps.ts     # Data Science pipeline definitions and baseline metrics
 ├── package.json
 ├── tsconfig.json
 └── README.md
@@ -150,22 +153,17 @@ npm run start
 
 ---
 
-## 🔒 Security, Compliance & Governance
+## Security, PDPA & Bounded Governance
 
-- **PDPA & Consent-First Protocol**: Zero automated transactions occur without explicit, bounded user authorization.
-- **Bounded Automation**: The user defines hard spending floors, maximum sweep amounts, and pause conditions at any time.
-- **Zero-Overdraft Guarantee**: The ฿1,000 Hard Floor buffer is shielded 24/7 by instantaneous Reverse Sweeping.
-- **Privacy by Design**: Transaction analysis operates using tokenized local identifiers, ensuring zero plain-text customer PII exposure.
+- **Consent-First Architecture**: Automated sweeping operations require upfront user authorization with explicit policy boundaries.
+- **User-Defined Constraints**: Users retain absolute authority to adjust daily budget minimums, set maximum sweep limits, or suspend automation at any moment.
+- **Zero-Overdraft Enforcement**: Primary checking accounts maintain an unbreachable ฿1,000 hard floor backed by continuous bi-directional liquidity monitoring.
+- **Privacy by Design**: Analytical pipelines operate on tokenized, localized transaction identifiers to safeguard personal identifiable information (PII) in compliance with PDPA guidelines.
 
 ---
 
-## 👥 Hackathon Credits
+## Project Metadata
 
-- **Project**: K-Runway & Predictive Auto-Saving
-- **Competition**: KBTG Hackathon
-- **Track**: Data Science & Predictive Analytics Track
+- **Initiative**: KBTG Hackathon Innovation Showcase
+- **Track**: Data Science & Predictive Analytics
 - **Repository**: [Panupong-xD/KTBG-Hackathon](https://github.com/Panupong-xD/KTBG-Hackathon)
-
----
-
-*Designed with ❤️ for First Jobbers & K PLUS Innovation*
