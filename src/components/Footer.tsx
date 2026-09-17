@@ -36,9 +36,8 @@ export default function Footer() {
             <p className="text-slate-600 text-xs leading-relaxed max-w-md">
               โครงการนำเสนอแนวคิดนวัตกรรม Data Science & Predictive Analytics: การผสานระหว่าง Financial Runway Intelligence และ Intelligent Auto-Save Engine ช่วยให้ First Jobbers สามารถตัดสินใจทางการเงินได้อย่างมั่นใจ
             </p>
-            <div className="text-[11px] text-[#008744] font-semibold flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#00A950]" />
-              <span>Data Science Solution for First Jobbers • KBTG Innovation</span>
+            <div className="text-[11px] text-[#008744] font-semibold">
+              Data Science Solution for First Jobbers • KBTG Innovation
             </div>
           </div>
 

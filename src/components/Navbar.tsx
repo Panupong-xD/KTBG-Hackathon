@@ -40,8 +40,7 @@ export default function Navbar() {
                   <span className="text-[#00A950] font-bold">&</span>
                   <span>Auto-Save</span>
                 </div>
-                <div className="flex items-center gap-1.5 mt-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#00A950]" />
+                <div className="mt-1">
                   <span className="text-[10px] font-bold text-[#00A950] tracking-wider uppercase">
                     K PLUS Innovation
                   </span>
@@ -55,9 +54,8 @@ export default function Navbar() {
             <a href="#problem" className="hover:text-[#00A950] transition-colors">
               ปัญหาที่พบ
             </a>
-            <a href="#how-it-works" className="hover:text-[#00A950] transition-colors flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#00A950]" />
-              <span>ขั้นตอนการทำงาน</span>
+            <a href="#how-it-works" className="hover:text-[#00A950] transition-colors">
+              ขั้นตอนการทำงาน
             </a>
             <a href="#features" className="hover:text-[#00A950] transition-colors">
               สถาปัตยกรรม AI

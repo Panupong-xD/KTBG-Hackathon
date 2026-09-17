@@ -9,8 +9,7 @@ export default function Screen1Data() {
       {/* Account Balance Header */}
       <div className="bg-gradient-to-br from-emerald-600 to-emerald-800 rounded-2xl p-4 shadow-lg shadow-emerald-950/40 border border-emerald-400/20 mb-3">
         <div className="flex items-center justify-between text-xs text-emerald-100/80 mb-1">
-          <div className="flex items-center gap-1.5 font-medium">
-            <div className="w-2 h-2 rounded-full bg-emerald-300 animate-ping" />
+          <div className="font-medium">
             <span>K-eSavings (บัญชีหลัก)</span>
           </div>
           <span className="font-mono">xxx-2-89412-x</span>

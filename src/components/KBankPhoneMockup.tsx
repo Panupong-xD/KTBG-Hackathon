@@ -55,10 +55,8 @@ export default function KBankPhoneMockup({ activeStep, onSelectStep }: KBankPhon
             <div className="w-2.5 h-2.5 rounded-full bg-[#0d0d0d] ring-1 ring-white/10 flex items-center justify-center">
               <div className="w-1 h-1 rounded-full bg-[#1a2b3c]/60" />
             </div>
-            {/* Green status indicator */}
-            <div className="w-2 h-2 rounded-full bg-black flex items-center justify-center">
-              <div className="w-1 h-1 rounded-full bg-[#00A950] animate-pulse" />
-            </div>
+            {/* Ambient sensor */}
+            <div className="w-2 h-2 rounded-full bg-[#151515] ring-1 ring-white/5" />
           </div>
 
           {/* iOS Status Bar (Flanking the Dynamic Island) */}

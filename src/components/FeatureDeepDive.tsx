@@ -65,12 +65,12 @@ export default function FeatureDeepDive() {
                     </defs>
 
                     {/* Top Legend */}
-                    <circle cx="45" cy="22" r="4" fill="#EF4444" />
-                    <text x="55" y="26" fill="#64748B" fontSize="10.5" fontWeight="600">
+                    <line x1="45" y1="22" x2="62" y2="22" stroke="#EF4444" strokeWidth="2.5" strokeDasharray="4 2" />
+                    <text x="68" y="26" fill="#64748B" fontSize="10.5" fontWeight="600">
                       Unmanaged Trajectory
                     </text>
-                    <circle cx="215" cy="22" r="4" fill="#00A950" />
-                    <text x="225" y="26" fill="#0F172A" fontSize="10.5" fontWeight="700">
+                    <line x1="220" y1="22" x2="238" y2="22" stroke="#00A950" strokeWidth="3" strokeLinecap="round" />
+                    <text x="244" y="26" fill="#0F172A" fontSize="10.5" fontWeight="700">
                       AI Runway Control
                     </text>
                     <text x="500" y="26" textAnchor="end" fill="#94A3B8" fontSize="10">
@@ -211,8 +211,7 @@ export default function FeatureDeepDive() {
                     </defs>
 
                     {/* Top Legend / Header Bar */}
-                    <circle cx="34" cy="18" r="4" fill="#00A950" />
-                    <text x="44" y="22" fill="#0F172A" fontSize="11" fontWeight="bold">
+                    <text x="22" y="22" fill="#0F172A" fontSize="11" fontWeight="bold">
                       K+ Daily Wallet (บัญชีใช้จ่าย)
                     </text>
                     
@@ -220,8 +219,7 @@ export default function FeatureDeepDive() {
                       AUTO-SWEEP PROTOCOL
                     </text>
 
-                    <circle cx="369" cy="18" r="4" fill="#00A950" />
-                    <text x="379" y="22" fill="#0F172A" fontSize="11" fontWeight="bold">
+                    <text x="360" y="22" fill="#0F172A" fontSize="11" fontWeight="bold">
                       K-eSavings (บัญชีเงินเก็บ)
                     </text>
 

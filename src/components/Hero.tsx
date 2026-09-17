@@ -16,8 +16,7 @@ export default function Hero() {
         <div className="flex flex-col items-center text-center">
           
           {/* Tagline Badge for Data Science Track & First Jobbers */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-[#00A950]/10 text-[#008744] border border-[#00A950]/30 mb-6 shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-[#00A950]" />
+          <div className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold bg-emerald-50 text-[#008744] border border-emerald-200 mb-6 shadow-xs">
             <span>AI Cash-Flow Intelligence for First Jobbers</span>
           </div>
 
