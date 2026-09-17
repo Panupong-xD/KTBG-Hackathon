@@ -126,9 +126,9 @@ export default function KBankPhoneMockup({ activeStep, onSelectStep }: KBankPhon
                         <div className="text-[11px] font-semibold text-slate-500">ยอดเงินคงเหลือ (วิเคราะห์แล้ว)</div>
                         <div className="text-lg font-extrabold text-slate-900">฿32,500.00</div>
                       </div>
-                      <span className="text-[10px] font-bold text-[#00A950] bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                      {/* <span className="text-[10px] font-bold text-[#00A950] bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
                         ML Categorized
-                      </span>
+                      </span> */}
                     </div>
 
                     <div className="space-y-1.5 text-xs">

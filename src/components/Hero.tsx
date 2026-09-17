@@ -18,7 +18,7 @@ export default function Hero() {
           {/* Tagline Badge for Data Science Track & First Jobbers */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-[#00A950]/10 text-[#008744] border border-[#00A950]/30 mb-6 shadow-sm">
             <span className="w-2 h-2 rounded-full bg-[#00A950]" />
-            <span>Data Science Track Proposal • AI Cash-Flow Intelligence for First Jobbers</span>
+            <span>AI Cash-Flow Intelligence for First Jobbers</span>
           </div>
 
           {/* Headline */}
