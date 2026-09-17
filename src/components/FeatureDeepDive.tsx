@@ -1,151 +1,415 @@
 'use client';
 
-import React from 'react';
-import { Brain, Coins, Check, ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp, Cpu, ArrowRight, ShieldCheck, RotateCcw, TrendingUp, Lock } from 'lucide-react';
 
 export default function FeatureDeepDive() {
+  const [showTechDetails, setShowTechDetails] = useState<boolean>(false);
+
   return (
-    <section id="features" className="py-20 bg-white border-t border-slate-200">
+    <section id="features" className="py-20 bg-slate-50/50 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-block text-xs font-bold text-[#00A950] bg-[#00A950]/10 px-3 py-1 rounded-full mb-3">
+          <span className="inline-block text-xs font-bold text-[#00A950] bg-[#00A950]/10 px-3.5 py-1 rounded-full mb-3 tracking-wider uppercase border border-[#00A950]/20">
             CORE ARCHITECTURE
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
-            การผสาน 2 พลังนวัตกรรม FinTech
+            2 เสาหลักสถาปัตยกรรมนวัตกรรม AI
           </h2>
-          <p className="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed">
-            ทำงานประสานกันระหว่าง “สมองคาดการณ์” (Intelligence) และ “มือปฏิบัติการ” (Auto-Save Engine)
+          <p className="mt-2 text-slate-600 text-sm sm:text-base">
+            เปลี่ยนตรรกะ Machine Learning ให้เห็นภาพเชิงกลไกชัดเจนใน 3 วินาที
           </p>
         </div>
 
-        {/* 2 Big Pillar Cards */}
+        {/* 2 Architecture Cards with Meaningful Visual Shapes */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           
-          {/* Pillar 1 */}
-          <div className="bg-slate-50 border border-slate-200 rounded-3xl p-7 sm:p-9 flex flex-col justify-between shadow-sm">
+          {/* ========================================================= */}
+          {/* PILLAR 1: The Runway & Glide Slope (Aeronautical Metaphor) */}
+          {/* ========================================================= */}
+          <div className="bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
             <div>
-              <div className="flex items-center justify-between mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-[#00A950] flex items-center justify-center">
-                  <Brain className="w-6 h-6" />
-                </div>
-                <span className="text-xs font-mono font-bold text-[#00A950] bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-xs font-bold text-[#008744] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
                   PILLAR 01 : THE BRAIN
                 </span>
+                <span className="text-xs font-medium text-slate-400">Runway Intelligence</span>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
-                Financial Runway Intelligence <br />
-                <span className="text-base text-slate-500 font-normal">(สมองคาดการณ์กระแสเงินสด)</span>
+              <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight mb-1">
+                Dynamic Runway : เรดาร์ประคองวิถีการเงิน
               </h3>
-
-              <p className="text-sm text-slate-600 leading-relaxed mb-6">
-                โมเดล Machine Learning ที่เรียนรู้และจำแนกพฤติกรรมกระแสเงินสดระดับรายบุคคล พยากรณ์ความเสี่ยงเงินช็อตล่วงหน้า พร้อมคำนวณ Burn Rate และกรอบความปลอดภัย
+              <p className="text-xs sm:text-sm text-slate-500 mb-6">
+                พยากรณ์วิถีการเงิน 30 วันล่วงหน้า เพื่อประคองกระแสเงินสดให้อยู่เหนือโซนอันตรายเสมอ
               </p>
 
-              <div className="space-y-3.5 mb-6">
-                <div className="bg-white rounded-xl p-4 border border-slate-200">
-                  <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2 mb-1">
-                    <Check className="w-4 h-4 text-[#00A950] shrink-0" />
-                    <span>Time-Series Machine Learning & NLP</span>
-                  </h4>
-                  <p className="text-xs text-slate-600 pl-6 leading-relaxed">
-                    วิเคราะห์ยอดคงเหลือสิ้นวัน (EOD Balance) 180 วันล่าสุด แยกค่าใช้จ่ายจำเป็น (Fixed) และค่าใช้จ่ายตามอารมณ์ (Discretionary) อัตโนมัติ
-                  </p>
-                </div>
+              {/* Aeronautical Glide-Slope SVG Stage (Frameless) */}
+              {/* Aeronautical Glide-Slope SVG Stage (Frameless) */}
+              <div className="w-full flex items-center justify-center my-auto py-2">
+                <div className="w-full max-w-[580px]">
+                  <svg viewBox="0 0 540 280" className="w-full h-auto drop-shadow-xs select-none">
+                    <defs>
+                      {/* Safe Glide Area Gradient */}
+                      <linearGradient id="glideGreenGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stopColor="#00A950" stopOpacity="0.22" />
+                        <stop offset="100%" stopColor="#00A950" stopOpacity="0.01" />
+                      </linearGradient>
+                      {/* Runway Danger Zone Gradient */}
+                      <linearGradient id="runwayDangerZone" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stopColor="#EF4444" stopOpacity="0.04" />
+                        <stop offset="100%" stopColor="#EF4444" stopOpacity="0.18" />
+                      </linearGradient>
+                    </defs>
 
-                <div className="bg-white rounded-xl p-4 border border-slate-200">
-                  <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2 mb-1">
-                    <Check className="w-4 h-4 text-[#00A950] shrink-0" />
-                    <span>Probabilistic Confidence Intervals</span>
-                  </h4>
-                  <p className="text-xs text-slate-600 pl-6 leading-relaxed">
-                    จำลองกระแสเงินสด 10,000 สถานการณ์ ประเมินกรอบ Worst Case, Expected Case, และ Best Case เพื่อความแม่นยำแม้รายรับผันผวน
-                  </p>
-                </div>
+                    {/* Top Legend */}
+                    <circle cx="45" cy="22" r="4" fill="#EF4444" />
+                    <text x="55" y="26" fill="#64748B" fontSize="10.5" fontWeight="600">
+                      Unmanaged Trajectory
+                    </text>
+                    <circle cx="215" cy="22" r="4" fill="#00A950" />
+                    <text x="225" y="26" fill="#0F172A" fontSize="10.5" fontWeight="700">
+                      AI Runway Control
+                    </text>
+                    <text x="500" y="26" textAnchor="end" fill="#94A3B8" fontSize="10">
+                      Monte Carlo 10k Sim
+                    </text>
 
-                <div className="bg-white rounded-xl p-4 border border-slate-200">
-                  <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2 mb-1">
-                    <Check className="w-4 h-4 text-[#00A950] shrink-0" />
-                    <span>Least-Disruptive Intervention (LDI)</span>
-                  </h4>
-                  <p className="text-xs text-slate-600 pl-6 leading-relaxed">
-                    แนะนำหมวดค่าใช้จ่ายที่ลดลงแล้วช่วยกู้ Safe Zone ได้มากที่สุด โดยกระทบความสุขในการใช้ชีวิตน้อยที่สุด
-                  </p>
+                    {/* Altitude Radar Horizon Grid Lines */}
+                    <line x1="40" y1="55" x2="500" y2="55" stroke="#E2E8F0" strokeWidth="1" strokeDasharray="3 3" />
+                    <text x="35" y="58" textAnchor="end" fill="#94A3B8" fontSize="8.5">฿15k</text>
+
+                    <line x1="40" y1="120" x2="500" y2="120" stroke="#E2E8F0" strokeWidth="1" strokeDasharray="3 3" />
+                    <text x="35" y="123" textAnchor="end" fill="#94A3B8" fontSize="8.5">฿5k</text>
+
+                    <line x1="40" y1="190" x2="500" y2="190" stroke="#FCA5A5" strokeWidth="1.2" strokeDasharray="4 4" />
+                    <text x="35" y="193" textAnchor="end" fill="#EF4444" fontSize="8.5" fontWeight="bold">฿1k</text>
+
+                    {/* Danger Zone Floor (Below ฿1,000) */}
+                    <rect x="40" y="190" width="460" height="50" rx="8" fill="url(#runwayDangerZone)" />
+                    <text x="48" y="218" fill="#DC2626" fontSize="10" fontWeight="bold" letterSpacing="0.4">
+                      DANGER ZONE : ยอดคงเหลือต่ำกว่า ฿1,000
+                    </text>
+
+                    {/* Safe Glide Slope Shaded Area */}
+                    <polygon 
+                      points="45,65 170,95 310,130 475,165 475,190 45,190" 
+                      fill="url(#glideGreenGlow)" 
+                    />
+
+                    {/* Unmanaged Descent Path (Red Dashed Line dropping on Day 21) */}
+                    <path
+                      d="M 45 65 C 150 85, 230 130, 315 190 L 345 228"
+                      fill="none"
+                      stroke="#EF4444"
+                      strokeWidth="2.5"
+                      strokeDasharray="6 4"
+                    />
+
+                    {/* Crash Impact Marker on Day 21 */}
+                    <circle cx="315" cy="190" r="5" fill="#EF4444" stroke="#FFFFFF" strokeWidth="2" />
+                    <rect x="235" y="148" width="150" height="26" rx="6" fill="#FEF2F2" stroke="#FCA5A5" strokeWidth="1" />
+                    <text x="310" y="165" textAnchor="middle" fill="#B91C1C" fontSize="10.5" fontWeight="bold">
+                      Day 21 : เงินหมดก่อนสิ้นเดือน
+                    </text>
+
+                    {/* AI Controlled Glide Path (Solid KBank Green Curve) */}
+                    <path
+                      d="M 45 65 C 170 95, 310 130, 475 165"
+                      fill="none"
+                      stroke="#00A950"
+                      strokeWidth="3.5"
+                      strokeLinecap="round"
+                    />
+
+                    {/* Aircraft Glider Icon Riding the Green Slope */}
+                    <g transform="translate(250, 100)">
+                      <path 
+                        d="M 0 0 L 16 7 L 16 11 L 3 8 L 3 16 L 8 19 L 8 22 L 0 20 L -8 22 L -8 19 L -3 16 L -3 8 L -16 11 L -16 7 Z" 
+                        fill="#00A950" 
+                        transform="rotate(12) scale(0.65)" 
+                      />
+                    </g>
+
+                    {/* AI Safe-to-Spend Floating Badge */}
+                    <rect x="155" y="74" width="152" height="26" rx="13" fill="#00A950" filter="drop-shadow(0 2px 4px rgba(0,169,80,0.25))" />
+                    <text x="231" y="91" textAnchor="middle" fill="#FFFFFF" fontSize="11" fontWeight="bold">
+                      Safe-to-Spend : ฿380 / วัน
+                    </text>
+
+                    {/* Payday Safe Touchdown (Day 30) */}
+                    <circle cx="475" cy="165" r="6" fill="#00A950" stroke="#FFFFFF" strokeWidth="2" />
+                    <rect x="405" y="122" width="95" height="26" rx="6" fill="#ECFDF5" stroke="#6EE7B7" strokeWidth="1" />
+                    <text x="452" y="139" textAnchor="middle" fill="#065F46" fontSize="10.5" fontWeight="bold">
+                      Day 30 Payday
+                    </text>
+
+                    {/* Timeline Milestones */}
+                    <text x="45" y="262" textAnchor="start" fill="#64748B" fontSize="10" fontWeight="bold">
+                      Day 1 (เงินเดือนออก)
+                    </text>
+                    <text x="180" y="262" textAnchor="middle" fill="#94A3B8" fontSize="10">
+                      Day 10
+                    </text>
+                    <text x="315" y="262" textAnchor="middle" fill="#DC2626" fontSize="10" fontWeight="bold">
+                      Day 21 (จุดเสี่ยง)
+                    </text>
+                    <text x="500" y="262" textAnchor="end" fill="#008744" fontSize="10" fontWeight="bold">
+                      Day 30 (เงินเดือนรอบใหม่)
+                    </text>
+                  </svg>
                 </div>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-slate-200 flex flex-wrap gap-2 text-xs text-slate-500">
-              <span>• Monte Carlo Simulation</span>
-              <span>• Dynamic Burn Rate</span>
-              <span>• Thai Context Natural Advice</span>
+            {/* Bottom 2 Clean Metric Badges */}
+            <div className="mt-6 pt-4 border-t border-slate-100 grid grid-cols-2 gap-3 text-xs">
+              <div className="bg-rose-50/70 border border-rose-200/80 rounded-xl p-2.5 text-center">
+                <span className="text-slate-500 block text-[11px] font-medium">Unmanaged Trajectory</span>
+                <strong className="text-rose-700 font-bold">เงินหมดก่อนสิ้นเดือน 9 วัน</strong>
+              </div>
+              <div className="bg-emerald-50/70 border border-emerald-200/80 rounded-xl p-2.5 text-center">
+                <span className="text-slate-500 block text-[11px] font-medium">AI Runway Control</span>
+                <strong className="text-[#008744] font-bold">Safe Zone 100% ตลอด 30 วัน</strong>
+              </div>
             </div>
           </div>
 
-          {/* Pillar 2 */}
-          <div className="bg-slate-50 border border-slate-200 rounded-3xl p-7 sm:p-9 flex flex-col justify-between shadow-sm">
+          {/* ========================================================= */}
+          {/* PILLAR 2: UI Wallet Container to Bank Safe Vault          */}
+          {/* ========================================================= */}
+          <div className="bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
             <div>
-              <div className="flex items-center justify-between mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center">
-                  <Coins className="w-6 h-6" />
-                </div>
-                <span className="text-xs font-mono font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-200">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-xs font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
                   PILLAR 02 : THE ACTUATOR
                 </span>
+                <span className="text-xs font-medium text-slate-400">Auto-Save Engine</span>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
-                Intelligent Auto-Save Engine <br />
-                <span className="text-base text-slate-500 font-normal">(มือปฏิบัติการกวาดเงินเย็น)</span>
+              <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight mb-1">
+                Micro-Surplus Sweeping : บัญชีหลักสู่ตู้เซฟเงินออม
               </h3>
-
-              <p className="text-sm text-slate-600 leading-relaxed mb-6">
-                กลไก Micro-Saving อัจฉริยะที่ทำหน้าที่แปลงคำแนะนำเป็นเงินเก็บจริง ตรวจจับ Safe-to-Sweep กวาดเงินส่วนเกินเข้าบัญชีดอกเบี้ยสูง พร้อมคุ้มกันสภาพคล่อง 100%
+              <p className="text-xs sm:text-sm text-slate-500 mb-6">
+                กวาดเฉพาะเงินเย็นที่ล้นเกินเกณฑ์ไปออม โดยมีแผงเหล็กคุ้มกันเงินสำรองก้นบัญชีไว้ 100%
               </p>
 
-              <div className="space-y-3.5 mb-6">
-                <div className="bg-white rounded-xl p-4 border border-slate-200">
-                  <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2 mb-1">
-                    <Check className="w-4 h-4 text-blue-600 shrink-0" />
-                    <span>Safe-to-Sweep Algorithmic Buffer</span>
-                  </h4>
-                  <p className="text-xs text-slate-600 pl-6 leading-relaxed">
-                    คำนวณเงินสดส่วนเกินที่ปราศจากความเสี่ยงอย่างแท้จริง หลังหักภาระหนี้ ค่าเช่า และบิลประจำล่วงหน้าทั้งรอบบิล
-                  </p>
-                </div>
+              {/* Stage: Clean Symbolic Vector Infographic (Wallet ➔ Smart Sweep ➔ Locked Vault) */}
+              <div className="w-full flex items-center justify-center my-auto py-2">
+                <div className="w-full max-w-[580px]">
+                  <svg viewBox="0 0 560 280" className="w-full h-auto drop-shadow-xs select-none">
+                    <defs>
+                      <marker id="arrowGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                        <path d="M 0 1 L 8 5 L 0 9 z" fill="#00A950" />
+                      </marker>
+                      <marker id="arrowBlue" viewBox="0 0 10 10" refX="4" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                        <path d="M 10 1 L 2 5 L 10 9 z" fill="#3B82F6" />
+                      </marker>
+                    </defs>
 
-                <div className="bg-white rounded-xl p-4 border border-slate-200">
-                  <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2 mb-1">
-                    <Check className="w-4 h-4 text-blue-600 shrink-0" />
-                    <span>Multi-Tier High-Yield Routing</span>
-                  </h4>
-                  <p className="text-xs text-slate-600 pl-6 leading-relaxed">
-                    โอนเงินไปยังบัญชี K-eSavings (ดอกเบี้ย 1.50% ต่อปี) หรือกระจายเข้า Cloud Pocket เป้าหมายต่างๆ โดยอัตโนมัติ
-                  </p>
-                </div>
+                    {/* Top Legend / Header Bar */}
+                    <circle cx="34" cy="18" r="4" fill="#00A950" />
+                    <text x="44" y="22" fill="#0F172A" fontSize="11" fontWeight="bold">
+                      K+ Daily Wallet (บัญชีใช้จ่าย)
+                    </text>
+                    
+                    <text x="280" y="22" textAnchor="middle" fill="#94A3B8" fontSize="9.5" fontWeight="bold" letterSpacing="0.4">
+                      AUTO-SWEEP PROTOCOL
+                    </text>
 
-                <div className="bg-white rounded-xl p-4 border border-slate-200">
-                  <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2 mb-1">
-                    <Check className="w-4 h-4 text-blue-600 shrink-0" />
-                    <span>Liquidity Shield & Instant Reverse Sweep</span>
-                  </h4>
-                  <p className="text-xs text-slate-600 pl-6 leading-relaxed">
-                    มี Hard Floor คุ้มกันยอดติดบัญชี ฿1,000 เสมอ และหากมีเหตุฉุกเฉิน ระบบจะดึงเงินกลับอัตโนมัติ พร้อมปุ่ม Undo 24 ชม.
-                  </p>
+                    <circle cx="369" cy="18" r="4" fill="#00A950" />
+                    <text x="379" y="22" fill="#0F172A" fontSize="11" fontWeight="bold">
+                      K-eSavings (บัญชีเงินเก็บ)
+                    </text>
+
+                    {/* ========================================================= */}
+                    {/* LEFT CONTAINER: K+ Checking Wallet                        */}
+                    {/* ========================================================= */}
+                    <rect x="20" y="36" width="185" height="232" rx="16" fill="#FFFFFF" stroke="#E2E8F0" strokeWidth="1.5" />
+                    <text x="34" y="54" fill="#64748B" fontSize="9" fontWeight="bold" letterSpacing="0.4">
+                      BALANCE TIERS
+                    </text>
+
+                    {/* Tier 1: Micro-Surplus (Outflow) */}
+                    <rect x="30" y="66" width="165" height="48" rx="10" fill="#ECFDF5" stroke="#A7F3D0" strokeWidth="1" />
+                    <text x="42" y="86" fill="#065F46" fontSize="10" fontWeight="bold">Micro-Surplus</text>
+                    <text x="183" y="87" textAnchor="end" fill="#008744" fontSize="13" fontWeight="900">+฿150</text>
+                    <text x="42" y="102" fill="#059669" fontSize="8">ส่วนเกินตัดออมรายวัน</text>
+
+                    {/* Tier 2: Daily Budget (Operating) */}
+                    <rect x="30" y="126" width="165" height="48" rx="10" fill="#F8FAFC" stroke="#E2E8F0" strokeWidth="1" />
+                    <text x="42" y="146" fill="#334155" fontSize="10" fontWeight="bold">Daily Budget</text>
+                    <text x="183" y="147" textAnchor="end" fill="#0F172A" fontSize="13" fontWeight="900">฿380</text>
+                    <text x="42" y="162" fill="#64748B" fontSize="8">งบใช้ชีวิตกินอยู่ปกติ</text>
+
+                    {/* Tier 3: Hard Floor Shield (Protection) */}
+                    <rect x="30" y="186" width="165" height="68" rx="10" fill="#EFF6FF" stroke="#BFDBFE" strokeWidth="1" />
+                    <text x="42" y="208" fill="#1E40AF" fontSize="10" fontWeight="bold">Hard Floor</text>
+                    <text x="183" y="209" textAnchor="end" fill="#1D4ED8" fontSize="13" fontWeight="900">฿1,000</text>
+                    <text x="42" y="226" fill="#3B82F6" fontSize="8">เงินก้นบัญชี (ห้ามแตะต้อง 100%)</text>
+                    <text x="42" y="240" fill="#60A5FA" fontSize="7.5">มี Reverse Sweep คอยคุ้มกัน</text>
+
+                    {/* ========================================================= */}
+                    {/* CENTER BRIDGE: Transfer Streams                           */}
+                    {/* ========================================================= */}
+                    {/* Top Stream: Smart Sweep Arrow */}
+                    <path d="M 205 90 L 228 90" fill="none" stroke="#00A950" strokeWidth="2" strokeDasharray="3 2" />
+                    <rect x="228" y="76" width="104" height="28" rx="14" fill="#00A950" filter="drop-shadow(0 2px 4px rgba(0,169,80,0.22))" />
+                    <text x="280" y="90" dominantBaseline="central" textAnchor="middle" fill="#FFFFFF" fontSize="10.5" fontWeight="bold">
+                      Smart Sweep ➔
+                    </text>
+                    <path d="M 332 90 L 350 90" fill="none" stroke="#00A950" strokeWidth="2" markerEnd="url(#arrowGreen)" />
+
+                    {/* Bottom Stream: Reverse Sweep Arrow */}
+                    <path d="M 355 220 L 336 220" fill="none" stroke="#3B82F6" strokeWidth="2" strokeDasharray="4 2" />
+                    <rect x="224" y="206" width="112" height="28" rx="14" fill="#EFF6FF" stroke="#93C5FD" strokeWidth="1" />
+                    
+                    {/* Clean SVG Vector Return Arrow Icon inside pill (Perfect vertical & horizontal alignment) */}
+                    <g transform="translate(241, 220)">
+                      <path 
+                        d="M 4.2 0.8 C 4.2 -2 2.5 -4.2 0 -4.2 C -2.5 -4.2 -4.2 -2 -4.2 0.8 L -4.2 3.8 M -2 1.6 L -4.2 4.2 L -6.4 1.6" 
+                        fill="none" 
+                        stroke="#1D4ED8" 
+                        strokeWidth="1.5" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                      />
+                    </g>
+                    <text x="288" y="220" dominantBaseline="central" textAnchor="middle" fill="#1D4ED8" fontSize="10" fontWeight="bold">
+                      Reverse Sweep
+                    </text>
+                    <path d="M 224 220 L 210 220" fill="none" stroke="#3B82F6" strokeWidth="2" markerEnd="url(#arrowBlue)" />
+
+                    {/* ========================================================= */}
+                    {/* RIGHT CONTAINER: K-eSavings (Locked Savings Vault)        */}
+                    {/* ========================================================= */}
+                    <rect x="355" y="36" width="185" height="232" rx="16" fill="#FFFFFF" stroke="#A7F3D0" strokeWidth="1.5" />
+                    <text x="447.5" y="54" textAnchor="middle" fill="#008744" fontSize="9" fontWeight="bold" letterSpacing="0.4">
+                      LOCKED FOR HIGH-YIELD
+                    </text>
+
+                    {/* The Symbolic Padlock (Refined & Compact with clear 20px+ spacing) */}
+                    {/* Shackle */}
+                    <path d="M 439 85 A 8.5 8.5 0 0 1 456 85 V 93 H 439 Z" fill="none" stroke="#00A950" strokeWidth="2.8" strokeLinecap="round" />
+                    {/* Lock Body */}
+                    <rect x="429.5" y="93" width="36" height="26" rx="7" fill="#00A950" filter="drop-shadow(0 2px 4px rgba(0,169,80,0.22))" />
+                    {/* Keyhole */}
+                    <circle cx="447.5" cy="103" r="2.4" fill="#FFFFFF" />
+                    <path d="M 446.3 104 L 448.7 104 L 449.5 111 L 445.5 111 Z" fill="#FFFFFF" />
+
+                    {/* High-Yield Rate */}
+                    <text x="447.5" y="145" textAnchor="middle" fill="#0F172A" fontSize="18" fontWeight="900" letterSpacing="-0.5">
+                      1.50%
+                    </text>
+                    <text x="447.5" y="159" textAnchor="middle" fill="#059669" fontSize="9" fontWeight="bold" letterSpacing="0.5">
+                      P.A. DIGITAL YIELD
+                    </text>
+
+                    {/* Accumulated Reserve Box */}
+                    <rect x="367" y="180" width="161" height="74" rx="12" fill="#ECFDF5" stroke="#6EE7B7" strokeWidth="1" />
+                    <text x="447.5" y="202" textAnchor="middle" fill="#065F46" fontSize="9" fontWeight="600">
+                      เงินสำรองฉุกเฉินสะสม
+                    </text>
+                    <text x="447.5" y="224" textAnchor="middle" fill="#064E3B" fontSize="14" fontWeight="900">
+                      ~ ฿4,500 / เดือน
+                    </text>
+                    <text x="447.5" y="240" textAnchor="middle" fill="#059669" fontSize="8">
+                      คุ้มครองเงินต้น 100%
+                    </text>
+                  </svg>
                 </div>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-slate-200 flex flex-wrap gap-2 text-xs text-slate-500">
-              <span>• Zero Overdraft Guarantee</span>
-              <span>• Hard Floor Buffer</span>
-              <span>• 24h Reverse Sweep</span>
+            {/* Bottom 2 Clean Metric Badges */}
+            <div className="mt-6 pt-4 border-t border-slate-100 grid grid-cols-2 gap-3 text-xs">
+              <div className="bg-blue-50/70 border border-blue-200/80 rounded-xl p-2.5 text-center">
+                <span className="text-slate-500 block text-[11px] font-medium">Zero-Overdraft Guarantee</span>
+                <strong className="text-blue-800 font-bold">Hard Floor ฿1,000 ปลอดภัย 100%</strong>
+              </div>
+              <div className="bg-emerald-50/70 border border-emerald-200/80 rounded-xl p-2.5 text-center">
+                <span className="text-slate-500 block text-[11px] font-medium">Auto-Savings Growth</span>
+                <strong className="text-[#008744] font-bold">รับดอกเบี้ย 1.50% ต่อปีอัตโนมัติ</strong>
+              </div>
             </div>
           </div>
 
+        </div>
+
+        {/* ========================================================= */}
+        {/* SEPARATE COLLAPSIBLE: Technical Architecture Details */}
+        {/* ========================================================= */}
+        <div className="mt-10 max-w-4xl mx-auto">
+          <button
+            type="button"
+            onClick={() => setShowTechDetails(!showTechDetails)}
+            className="w-full bg-white hover:bg-slate-100/80 border border-slate-200/90 rounded-2xl p-4 text-xs sm:text-sm font-bold text-slate-700 flex items-center justify-between shadow-sm transition-all"
+          >
+            <span className="flex items-center gap-2">
+              <Cpu className="w-4 h-4 text-[#00A950]" />
+              <span>ดูตรรกะและสถาปัตยกรรมเชิงลึก (Machine Learning & Policy Architecture)</span>
+            </span>
+            <span className="flex items-center gap-1 text-slate-400 text-xs font-normal">
+              {showTechDetails ? 'ย่อรายละเอียด' : 'ขยายดูรายละเอียด'}
+              {showTechDetails ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+            </span>
+          </button>
+
+          {/* Collapsible Content */}
+          {showTechDetails && (
+            <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+                <div className="text-xs font-bold text-[#00A950] mb-1 uppercase tracking-wide">
+                  1. Predictive Time-Series
+                </div>
+                <h4 className="text-sm font-bold text-slate-900 mb-1">
+                  Monte Carlo & Adaptive Burn Rate
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  จำลองพฤติกรรมการเงิน 10,000 ครั้งล่วงหน้า ผสานอัลกอริทึมวิเคราะห์บิลคงค้าง เพื่อคำนวณ Daily Burn Rate ที่แม่นยำและไม่ทำให้เงินสะดุด
+                </p>
+              </div>
+
+              <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+                <div className="text-xs font-bold text-blue-600 mb-1 uppercase tracking-wide">
+                  2. Micro-Surplus Siphon
+                </div>
+                <h4 className="text-sm font-bold text-slate-900 mb-1">
+                  Dynamic Threshold & Reverse Sweep
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  กวาดเฉพาะเงินเย็นที่ล้นเกินเกณฑ์ประจำวัน และมีระบบ Reverse Sweep คอยดึงเงินคืนเข้าบัญชีหลักอัตโนมัติหากมีบิลด่วนฉุกเฉินเข้ามา
+                </p>
+              </div>
+
+              <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+                <div className="text-xs font-bold text-emerald-700 mb-1 uppercase tracking-wide">
+                  3. Anti-Feedback Loop
+                </div>
+                <h4 className="text-sm font-bold text-slate-900 mb-1">
+                  แยกบัญชีเงินออมออกจากระบบคำนวณ
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  ป้องกันไม่ให้การเก็บออมไปลดทอนตัวเลข Runway รายวัน ทำให้ผู้ใช้มองเห็นสภาพคล่องจริงโดยไม่สับสน
+                </p>
+              </div>
+
+              <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+                <div className="text-xs font-bold text-amber-600 mb-1 uppercase tracking-wide">
+                  4. Bank-Grade Compliance
+                </div>
+                <h4 className="text-sm font-bold text-slate-900 mb-1">
+                  PDPA & Bounded Consent
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  ผู้ใช้เป็นผู้กำหนดกรอบวงเงินสูงสุดและเงื่อนไขเองทั้งหมด 100% สามารถปิดระบบหรือปรับเปลี่ยนข้อกำหนดได้ตลอดเวลา
+                </p>
+              </div>
+            </div>
+          )}
         </div>
 
       </div>
