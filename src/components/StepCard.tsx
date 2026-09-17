@@ -25,19 +25,16 @@ export default function StepCard({ step, isActive, onActivate }: StepCardProps) 
         <div className="absolute -left-1 top-6 bottom-6 w-1.5 bg-[#00A950] rounded-full" />
       )}
 
-      {/* Header: Step Number & Tech Badge */}
-      <div className="flex items-center justify-between gap-3 mb-3">
+      {/* Header: Step Number */}
+      <div className="mb-3">
         <span
-          className={`font-mono text-xs font-bold px-2.5 py-1 rounded-md transition-colors ${
+          className={`inline-block font-mono text-xs font-bold px-2.5 py-1 rounded-md transition-colors ${
             isActive
               ? 'bg-[#00A950] text-white'
               : 'bg-slate-100 text-slate-600 group-hover:bg-slate-200'
           }`}
         >
           Step {step.stepNumber}
-        </span>
-        <span className="text-xs font-medium text-slate-500 bg-slate-50 px-2.5 py-1 rounded-full border border-slate-200">
-          {step.techBadge}
         </span>
       </div>
 
