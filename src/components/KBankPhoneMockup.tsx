@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Wifi,
   Battery,
@@ -28,9 +29,46 @@ interface KBankPhoneMockupProps {
   onSelectStep?: (index: number) => void;
 }
 
+const cardSwipeVariants = {
+  enter: (direction: number) => ({
+    x: direction > 0 ? 36 : direction < 0 ? -36 : 0,
+    opacity: 0,
+    scale: 0.98,
+  }),
+  center: {
+    x: 0,
+    opacity: 1,
+    scale: 1,
+    transition: {
+      x: { type: 'spring', stiffness: 360, damping: 32 },
+      opacity: { duration: 0.22, ease: 'easeOut' },
+      scale: { duration: 0.22, ease: 'easeOut' },
+    },
+  },
+  exit: (direction: number) => ({
+    x: direction > 0 ? -36 : direction < 0 ? 36 : 0,
+    opacity: 0,
+    scale: 0.98,
+    transition: {
+      x: { type: 'spring', stiffness: 360, damping: 32 },
+      opacity: { duration: 0.18, ease: 'easeIn' },
+      scale: { duration: 0.18, ease: 'easeIn' },
+    },
+  }),
+};
+
 export default function KBankPhoneMockup({ activeStep, onSelectStep }: KBankPhoneMockupProps) {
   const [slideConfirmed, setSlideConfirmed] = useState(false);
   const [undone, setUndone] = useState(false);
+
+  // Direction tracking for smooth horizontal swipe transition between steps
+  const [direction, setDirection] = useState(0);
+  const [prevStep, setPrevStep] = useState(activeStep);
+
+  if (activeStep !== prevStep) {
+    setDirection(activeStep > prevStep ? 1 : -1);
+    setPrevStep(activeStep);
+  }
 
   return (
     <div className="relative mx-auto flex flex-col items-center select-none">
@@ -106,154 +144,193 @@ export default function KBankPhoneMockup({ activeStep, onSelectStep }: KBankPhon
             
             {/* Section 1: K+ To Do / Innovation Feature Card */}
             <div>
-              <div className="flex items-center gap-2 mb-2">
-                <div className="w-1 h-3.5 bg-[#00A950] rounded-full" />
-                <span className="text-xs font-bold text-white tracking-wide">
-                  K+ To Do
-                </span>
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center gap-2">
+                  <div className="w-1 h-3.5 bg-[#00A950] rounded-full" />
+                  <span className="text-xs font-bold text-white tracking-wide">
+                    K+ To Do
+                  </span>
+                </div>
+                {/* 5-step animated card indicators */}
+                <div className="flex items-center gap-1">
+                  {[0, 1, 2, 3, 4].map((stepIdx) => (
+                    <button
+                      type="button"
+                      key={stepIdx}
+                      onClick={() => onSelectStep && onSelectStep(stepIdx)}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${
+                        stepIdx === activeStep
+                          ? 'w-4 bg-[#00A950]'
+                          : 'w-1.5 bg-slate-600/70 hover:bg-slate-400'
+                      }`}
+                      title={`Step ${stepIdx + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
 
-              {/* Dynamic Feature Card (Replaces Welcome to K+) */}
-              <div className="relative bg-white text-slate-900 rounded-2xl p-4 shadow-lg min-h-[148px] flex flex-col justify-between transition-all duration-300">
-                
-                {/* State 1: Data Ingestion & Classification */}
-                {activeStep === 0 && (
-                  <div>
-                    <div className="flex items-start justify-between mb-2">
-                      <div>
-                        <div className="text-[11px] font-semibold text-slate-500">ยอดเงินคงเหลือ (วิเคราะห์แล้ว)</div>
-                        <div className="text-lg font-extrabold text-slate-900">฿32,500.00</div>
+              {/* Dynamic Feature Card (Smooth Swiping Transition) */}
+              <div className="relative bg-white text-slate-900 rounded-2xl shadow-lg min-h-[154px] overflow-hidden flex flex-col justify-center border border-slate-100/80 transition-all duration-300">
+                <AnimatePresence mode="wait" custom={direction} initial={false}>
+                  <motion.div
+                    key={activeStep}
+                    custom={direction}
+                    variants={cardSwipeVariants}
+                    initial="enter"
+                    animate="center"
+                    exit="exit"
+                    className="p-4 w-full h-full flex flex-col justify-center"
+                  >
+                    {/* State 1: Data Ingestion & Classification */}
+                    {activeStep === 0 && (
+                      <div className="my-auto">
+                        <div className="flex items-start justify-between mb-2.5 pb-2 border-b border-slate-100">
+                          <div>
+                            <div className="text-[11px] font-medium text-slate-500">ยอดเงินคงเหลือ (วิเคราะห์แล้ว)</div>
+                            <div className="text-lg font-extrabold text-slate-900">฿32,500.00</div>
+                          </div>
+                          <span className="text-[10px] font-semibold text-[#00A950]">
+                            AI Tagged
+                          </span>
+                        </div>
+
+                        <div className="space-y-2 text-xs">
+                          <div className="flex items-center justify-between">
+                            <span className="text-slate-700 font-medium">ค่าเช่าที่พัก</span>
+                            <span className="text-[11px] text-blue-700 font-semibold">
+                              Fixed -฿7,500
+                            </span>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <span className="text-slate-700 font-medium">ช้อปปิ้ง & อาหาร</span>
+                            <span className="text-[11px] text-amber-700 font-semibold">
+                              Discretionary -฿1,420
+                            </span>
+                          </div>
+                        </div>
                       </div>
-                      {/* <span className="text-[10px] font-bold text-[#00A950] bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-                        ML Categorized
-                      </span> */}
-                    </div>
+                    )}
 
-                    <div className="space-y-1.5 text-xs">
-                      <div className="flex items-center justify-between bg-slate-50 p-1.5 rounded-lg border border-slate-100">
-                        <span className="text-slate-600 font-medium truncate">ค่าเช่าที่พัก</span>
-                        <span className="text-[10px] bg-blue-100 text-blue-800 font-bold px-1.5 py-0.2 rounded shrink-0">
-                          Fixed -฿7,500
-                        </span>
+                    {/* State 2: Probabilistic Cash-Flow Runway */}
+                    {activeStep === 1 && (
+                      <div className="my-auto py-1">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-xs font-bold text-slate-900">Financial Runway</span>
+                          <span className="text-xs font-extrabold text-[#00A950]">
+                            85% Safe Zone
+                          </span>
+                        </div>
+
+                        <div className="w-full bg-slate-100 rounded-full h-2.5 mb-3.5 overflow-hidden">
+                          <div className="bg-[#00A950] h-2.5 rounded-full transition-all duration-500" style={{ width: '85%' }} />
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-3 pt-2.5 border-t border-slate-100 text-xs">
+                          <div>
+                            <div className="text-[11px] text-slate-500 font-medium">ยอดใช้ได้วันนี้</div>
+                            <div className="font-extrabold text-slate-900 text-sm mt-1">฿380 / วัน</div>
+                          </div>
+                          <div className="border-l border-slate-100 pl-3">
+                            <div className="text-[11px] text-slate-500 font-medium">เงินเดือนออกใน</div>
+                            <div className="font-extrabold text-[#00A950] text-sm mt-1">18 วัน <span className="text-[10px] text-slate-400 font-normal">(28 ก.ย.)</span></div>
+                          </div>
+                        </div>
                       </div>
-                      <div className="flex items-center justify-between bg-slate-50 p-1.5 rounded-lg border border-slate-100">
-                        <span className="text-slate-600 font-medium truncate">ช้อปปิ้ง & อาหาร</span>
-                        <span className="text-[10px] bg-amber-100 text-amber-800 font-bold px-1.5 py-0.2 rounded shrink-0">
-                          Discretionary -฿1,420
-                        </span>
+                    )}
+
+                    {/* State 3: Safe-to-Sweep Detection & Recommendation */}
+                    {activeStep === 2 && (
+                      <div className="my-auto">
+                        <div className="flex items-baseline justify-between mb-2 pb-2 border-b border-slate-100">
+                          <span className="text-[11px] font-medium text-slate-500">ตรวจพบเงินเหลือจริงวันนี้</span>
+                          <span className="text-lg font-extrabold text-[#00A950]">฿150.00</span>
+                        </div>
+                        
+                        <div className="py-0.5 text-xs">
+                          <div className="font-semibold text-slate-800 text-[11px] flex items-center gap-1.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#00A950]" />
+                            แนะแนว Least-Disruptive Action
+                          </div>
+                          <p className="text-slate-600 text-[11px] mt-0.5 leading-relaxed">
+                            ลด Delivery ลง ฿80/วัน ดัน Safe Zone สู่ 92% โดยไม่กระทบชีวิต
+                          </p>
+                        </div>
+
+                        <div className="pt-2 mt-1 border-t border-slate-100 text-[11px] text-slate-500 flex items-center justify-between">
+                          <span>เป้าหมาย: เงินสำรองฉุกเฉิน</span>
+                          <span className="text-[#00A950] font-bold">เร็วขึ้น 3 วัน</span>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                )}
+                    )}
 
-                {/* State 2: Probabilistic Cash-Flow Runway */}
-                {activeStep === 1 && (
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs font-bold text-slate-800">Financial Runway</span>
-                      <span className="text-[10px] font-bold text-[#00A950] bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-                        85% Safe Zone
-                      </span>
-                    </div>
+                    {/* State 4: User Approval with Bounded Consent */}
+                    {activeStep === 3 && (
+                      <div className="my-auto">
+                        <div className="flex items-baseline justify-between mb-2 pb-2 border-b border-slate-100">
+                          <div>
+                            <div className="text-[11px] font-medium text-slate-500">ยืนยันนำเงินเหลือไปออม</div>
+                            <div className="text-base font-extrabold text-slate-900">฿150.00</div>
+                          </div>
+                          <span className="text-[10px] font-bold text-emerald-700">
+                            Runway &gt; 80%
+                          </span>
+                        </div>
 
-                    <div className="w-full bg-slate-100 rounded-full h-2.5 mb-2 overflow-hidden">
-                      <div className="bg-[#00A950] h-2.5 rounded-full transition-all duration-500" style={{ width: '85%' }} />
-                    </div>
+                        <button
+                          onClick={() => setSlideConfirmed(!slideConfirmed)}
+                          className={`w-full py-2.5 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 my-1 ${
+                            slideConfirmed
+                              ? 'bg-[#00A950] text-white shadow-sm'
+                              : 'bg-slate-900 hover:bg-slate-800 text-white shadow-sm'
+                          }`}
+                        >
+                          {slideConfirmed ? (
+                            <>
+                              <CheckCircle2 className="w-3.5 h-3.5" /> ยืนยันการออมเรียบร้อย
+                            </>
+                          ) : (
+                            <>
+                              <span>แตะเพื่อยืนยันออม ฿150</span>
+                              <ChevronRight className="w-3.5 h-3.5" />
+                            </>
+                          )}
+                        </button>
 
-                    <div className="grid grid-cols-2 gap-2 text-xs bg-slate-50 p-2 rounded-xl border border-slate-100">
-                      <div>
-                        <div className="text-[10px] text-slate-500">Burn Rate แนะนำ</div>
-                        <div className="font-bold text-slate-900">฿380 / วัน</div>
+                        <div className="text-[10px] text-slate-400 text-center font-medium mt-1">
+                          ระบบไม่หักเงินเอง • ผู้ใช้เป็นคนกดยืนยัน 100%
+                        </div>
                       </div>
-                      <div>
-                        <div className="text-[10px] text-slate-500">เงินเดือนออกใน</div>
-                        <div className="font-bold text-[#00A950]">18 วัน (28 ก.ย.)</div>
+                    )}
+
+                    {/* State 5: Liquidity Shield & Multi-tier Routing */}
+                    {activeStep === 4 && (
+                      <div className="my-auto">
+                        <div className="flex items-center gap-2 pb-2 mb-2 border-b border-slate-100">
+                          <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center shrink-0">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-[#00A950]" />
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-slate-900">โอนเข้า K-eSavings สำเร็จ!</div>
+                            <div className="text-[10px] text-[#00A950] font-medium">รับดอกเบี้ย 1.50% ต่อปี</div>
+                          </div>
+                        </div>
+
+                        <div className="py-0.5 text-[11px] text-slate-600 space-y-0.5 mb-2">
+                          <div className="font-semibold text-slate-800">Liquidity Shield คุ้มกัน ฿1,000 เสมอ</div>
+                          <div className="text-slate-500">หากมีบิลด่วนฉุกเฉิน สามารถดึงเงินคืนได้ทันที</div>
+                        </div>
+
+                        <button
+                          onClick={() => setUndone(!undone)}
+                          className="w-full py-2 px-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-semibold flex items-center justify-center gap-1.5 transition-colors"
+                        >
+                          <RotateCcw className="w-3.5 h-3.5" />
+                          <span>{undone ? 'ดึงเงินกลับเรียบร้อย' : 'ยกเลิก / Undo (ภายใน 24 ชม.)'}</span>
+                        </button>
                       </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* State 3: Safe-to-Sweep Detection & Recommendation */}
-                {activeStep === 2 && (
-                  <div>
-                    <div className="flex items-center justify-between mb-1.5">
-                      <span className="text-[11px] font-bold text-slate-700">ตรวจพบเงินเย็นปลอดภัยวันนี้</span>
-                      <span className="text-base font-extrabold text-[#00A950]">฿150.00</span>
-                    </div>
-                    
-                    <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-2 text-xs mb-2">
-                      <div className="font-bold text-[#008744] text-[11px]">Least-Disruptive Action:</div>
-                      <div className="text-slate-700 text-[11px] mt-0.5">
-                        ลดชานม/Delivery ฿80/วัน ดัน Safe Zone เป็น 92%
-                      </div>
-                    </div>
-
-                    <div className="text-[11px] text-slate-600 flex items-center justify-between font-medium">
-                      <span>เป้าหมาย: เงินสำรองฉุกเฉิน</span>
-                      <span className="text-[#00A950] font-bold">เร็วขึ้น 3 วัน</span>
-                    </div>
-                  </div>
-                )}
-
-                {/* State 4: User Approval with Bounded Consent */}
-                {activeStep === 3 && (
-                  <div>
-                    <div className="text-xs font-bold text-slate-800 mb-1">
-                      อนุมัติการออม (Co-pilot Approval)
-                    </div>
-                    <div className="text-[11px] text-slate-500 mb-2">
-                      กวาดเงินเย็น ฿150 เข้า Pocket (Runway 85% ปลอดภัย)
-                    </div>
-
-                    <button
-                      onClick={() => setSlideConfirmed(!slideConfirmed)}
-                      className={`w-full py-2 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
-                        slideConfirmed
-                          ? 'bg-[#00A950] text-white shadow-sm'
-                          : 'bg-slate-900 hover:bg-slate-800 text-white'
-                      }`}
-                    >
-                      {slideConfirmed ? (
-                        <>
-                          <CheckCircle2 className="w-3.5 h-3.5" /> อนุมัติเรียบร้อย
-                        </>
-                      ) : (
-                        <>
-                          <span>สไลด์เพื่อออม ฿150</span>
-                          <ChevronRight className="w-3.5 h-3.5" />
-                        </>
-                      )}
-                    </button>
-
-                    <div className="mt-2 text-[10px] text-slate-400 text-center font-medium">
-                      Bounded Consent: ออมเฉพาะวันที่ Runway &gt; 80%
-                    </div>
-                  </div>
-                )}
-
-                {/* State 5: Liquidity Shield & Multi-tier Routing */}
-                {activeStep === 4 && (
-                  <div>
-                    <div className="flex items-center gap-1.5 text-xs font-bold text-[#00A950] mb-1">
-                      <CheckCircle2 className="w-4 h-4 text-[#00A950]" />
-                      <span>โอน ฿150 เข้า K-eSavings สำเร็จ!</span>
-                    </div>
-
-                    <div className="bg-slate-50 border border-slate-100 rounded-xl p-2 text-[11px] mb-2 text-slate-600">
-                      <div className="font-bold text-slate-800">Liquidity Shield คุ้มกัน ฿1,000 เสมอ</div>
-                      <div>Reverse Sweep ดึงเงินกลับอัตโนมัติหากมีบิลด่วน</div>
-                    </div>
-
-                    <button
-                      onClick={() => setUndone(!undone)}
-                      className="w-full py-1.5 px-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-semibold flex items-center justify-center gap-1 transition-colors"
-                    >
-                      <RotateCcw className="w-3 h-3" />
-                      <span>{undone ? 'ดึงเงินกลับเรียบร้อย' : 'ยกเลิก / Undo (ภายใน 24 ชม.)'}</span>
-                    </button>
-                  </div>
-                )}
-
+                    )}
+                  </motion.div>
+                </AnimatePresence>
               </div>
             </div>
 
