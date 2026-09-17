@@ -1703,9 +1703,9 @@
   .text-\[11px\] {
     font-size: 11px;
   }
-  .leading-\[1\.2\] {
-    --tw-leading: 1.2;
-    line-height: 1.2;
+  .leading-\[1\.22\] {
+    --tw-leading: 1.22;
+    line-height: 1.22;
   }
   .leading-none {
     --tw-leading: 1;
@@ -2217,10 +2217,6 @@
       font-size: var(--text-4xl);
       line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
-    .sm\:text-5xl {
-      font-size: var(--text-5xl);
-      line-height: var(--tw-leading, var(--text-5xl--line-height));
-    }
     .sm\:text-base {
       font-size: var(--text-base);
       line-height: var(--tw-leading, var(--text-base--line-height));
@@ -2237,9 +2233,9 @@
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
     }
-    .sm\:leading-\[1\.15\] {
-      --tw-leading: 1.15;
-      line-height: 1.15;
+    .sm\:leading-\[1\.18\] {
+      --tw-leading: 1.18;
+      line-height: 1.18;
     }
   }
   @media (width >= 48rem) {
@@ -2251,6 +2247,10 @@
     }
     .md\:grid-cols-4 {
       grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .md\:text-5xl {
+      font-size: var(--text-5xl);
+      line-height: var(--tw-leading, var(--text-5xl--line-height));
     }
   }
   @media (width >= 64rem) {
@@ -2298,9 +2298,8 @@
       font-size: var(--text-5xl);
       line-height: var(--tw-leading, var(--text-5xl--line-height));
     }
-    .lg\:text-6xl {
-      font-size: var(--text-6xl);
-      line-height: var(--tw-leading, var(--text-6xl--line-height));
+    .lg\:text-\[3\.4rem\] {
+      font-size: 3.4rem;
     }
   }
   @media (width >= 80rem) {

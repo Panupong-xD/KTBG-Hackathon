@@ -22,10 +22,10 @@ export default function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight max-w-4xl leading-[1.2] sm:leading-[1.15]">
-            รู้ล่วงหน้าว่าเงินจะพอถึงสิ้นเดือนไหม <br className="hidden sm:inline" />
-            พร้อมให้ AI ช่วยเก็บเงินส่วนเกิน <br className="hidden sm:inline" />
-            <span className="text-[#00A950]">แบบปลอดภัย ไร้กังวล</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-extrabold text-slate-900 tracking-tight max-w-5xl leading-[1.22] sm:leading-[1.18]">
+            <span className="inline-block">รู้ล่วงหน้าว่าเงินจะพอ</span><span className="inline-block">ถึงสิ้นเดือนไหม</span> <br className="hidden sm:inline" />
+            <span className="inline-block">พร้อมให้ AI ช่วยเก็บเงินส่วนเกิน</span> <br className="hidden sm:inline" />
+            <span className="text-[#00A950] inline-block">แบบปลอดภัย ไร้กังวล</span>
           </h1>
 
           {/* Sub-headline tailored to First Jobbers */}
