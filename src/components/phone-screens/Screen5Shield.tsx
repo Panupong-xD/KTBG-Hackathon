@@ -25,7 +25,7 @@ export default function Screen5Shield() {
           <CheckCircle className="w-7 h-7" />
         </div>
         <div className="text-xs font-semibold text-emerald-300 uppercase tracking-wide">
-          โอนเงินเย็นสำเร็จ
+          ยืนยันโอนออมสำเร็จ
         </div>
         <div className="text-2xl font-black text-white mt-0.5">
           ฿150.00
@@ -45,7 +45,7 @@ export default function Screen5Shield() {
           <span className="text-[10px] text-emerald-400 font-bold">฿1,000.00 Floor</span>
         </div>
         <p className="text-[11px] text-slate-300 leading-relaxed">
-          ระบบการันตีเงินติดบัญชีหลักไม่ต่ำกว่า ฿1,000 เสมอ หากมีบิลด่วนที่ยังไม่ถึงกำหนด ระบบจะระงับการออมโดยอัตโนมัติ
+          การันตีเงินติดบัญชีหลักไม่ต่ำกว่า ฿1,000 เสมอ แม้กดยืนยันออมไปแล้ว หากมีบิลด่วนฉุกเฉินก็มีระบบดึงเงินกลับได้ทันที
         </p>
       </div>
 

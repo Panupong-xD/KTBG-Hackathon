@@ -48,7 +48,7 @@ export default function InnovationConcept() {
             <span>• Zero Overdraft Guarantee</span>
             <span>• PDPA Bounded Consent</span>
             <span>• Data Science & ML Driven</span>
-            <span>• สิทธิการอนุมัติ 100% โดยผู้ใช้</span>
+            <span>• สิทธิการอนุมัติ 100% โดยผู้ใช้ (ไม่หักเงินเอง)</span>
           </div>
 
         </div>

@@ -68,10 +68,10 @@ export default function Screen2Runway() {
         </div>
 
         <div className="mt-1 text-xs text-slate-300 font-medium">
-          โอกาส 85% ที่เงินจะพอใช้ถึงวันเงินเดือนออก
+          โอกาส 85% ที่เงินจะพอถึงวันเงินเดือนออก
         </div>
         <div className="text-[11px] text-slate-400 mt-0.5">
-          จำลองความน่าจะเป็น 10,000 สถานการณ์ด้วย ML
+          จำลอง 10,000 รูปแบบ พร้อมเกลี่ยชดเชยหากใช้เกิน
         </div>
       </div>
 
@@ -80,13 +80,13 @@ export default function Screen2Runway() {
         <div className="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3">
           <div className="flex items-center gap-1.5 text-[11px] text-slate-400 mb-1">
             <Flame className="w-3.5 h-3.5 text-amber-400" />
-            <span>Burn Rate แนะนำ</span>
+            <span>ยอดใช้ได้วันนี้</span>
           </div>
           <div className="text-base font-bold text-white">
             ฿420 <span className="text-xs font-normal text-slate-400">/ วัน</span>
           </div>
           <div className="text-[10px] text-emerald-400 mt-0.5">
-            ปลอดภัย ไม่สะดุด
+            เกลี่ยชดเชยนุ่มนวลหากเกิน
           </div>
         </div>
 

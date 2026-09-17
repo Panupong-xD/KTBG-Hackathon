@@ -18,38 +18,38 @@ export const SCROLLY_STEPS: ScrollyStep[] = [
   {
     id: 1,
     stepNumber: "01",
-    techBadge: "Time-Series Classification & NLP Parser",
-    category: "Data Ingestion & Classification",
-    title: "ดึง Transaction History และวิเคราะห์พฤติกรรมอัตโนมัติ",
-    highlightPhrase: "แยกแยะค่าใช้จ่ายจำเป็นออกจากอารมณ์ชั่ววูบ",
-    description: "ระบบดึงประวัติการใช้จ่ายย้อนหลังผ่าน Secure Open Banking API จำแนกค่าใช้จ่ายจำเป็น (Fixed Obligations เช่น ค่าเช่าห้อง, บิลค่าไฟ, ค่าเดินทาง) ออกจากค่าใช้จ่ายตามอารมณ์ (Discretionary เช่น ช้อปปิ้ง, คาเฟ่) พร้อมตรวจจับช่วงวันใช้จ่ายหนัก (High-spend weekend spike)",
+    techBadge: "Time-Series Classification & Cold Start Onboarding",
+    category: "Data Ingestion & Instant Cold Start",
+    title: "วิเคราะห์ Transaction History และรองรับ Onboarding บัญชีใหม่",
+    highlightPhrase: "แยกแยะค่าใช้จ่ายจำเป็น พร้อมระบบเริ่มใช้งานได้ตั้งแต่วันแรก",
+    description: "ระบบดึงประวัติการใช้จ่ายเพื่อจำแนกค่าใช้จ่ายจำเป็น (Fixed Obligations เช่น ค่าเช่า, บิล) ออกจากค่าใช้จ่ายผันแปร (Discretionary) และสำหรับ First Jobbers ที่เพิ่งเปิดบัญชีใหม่ ยังไม่มีประวัติ ระบบมี Quick Onboarding ตอบคำถามสั้นๆ 2 ข้อ (รายได้และค่าเช่า) เพื่อเริ่มคำนวณงบแบบระมัดระวังได้ทันที",
     details: [
       "แท็กอัตโนมัติ 48 หมวดหมู่ด้วย Machine Learning ความแม่นยำ 98.4%",
-      "ตรวจจับพฤติกรรม High-Spend Weekend และรอบการจ่ายประจำเดือน",
-      "แยกกระแสเงินสดรายได้ประจำและรายได้เสริมอย่างแม่นยำ"
+      "Instant Cold Start: บัญชีใหม่ระบุรายได้และค่าเช่า ระบบเริ่มทำงานได้ทันทีโดยไม่ต้องรอประวัติ",
+      "ตรวจจับพฤติกรรม High-Spend Weekend และรอบการจ่ายประจำเดือน"
     ],
     metrics: [
       { label: "หมวดหมู่ Fixed", value: "฿12,419", sublabel: "ค่าเช่าห้อง + บิลประจำ" },
       { label: "หมวดหมู่ Discretionary", value: "฿6,830", sublabel: "คาเฟ่ & ช้อปปิ้งออนไลน์" },
-      { label: "ความแม่นยำ NLP", value: "98.4%", sublabel: "ความแม่นยำการจำแนก" }
+      { label: "ระบบ Cold Start", value: "พร้อมทันที", sublabel: "ตอบเพียง 2 ข้อมูลหลัก" }
     ]
   },
   {
     id: 2,
     stepNumber: "02",
-    techBadge: "Monte Carlo Simulation & Bayesian Forecasting",
-    category: "Probabilistic Cash-Flow Runway",
-    title: "ประเมินความเสี่ยงเงินช็อตล่วงหน้าด้วย Probabilistic ML",
-    highlightPhrase: "ไม่ใช่แค่ดูอดีต แต่รู้ล่วงหน้าว่าเงินจะพอถึงสิ้นเดือนกี่ %",
-    description: "แทนที่จะบอกว่าเงินจะหมดวันไหนเป็นตัวเลขทื่อๆ ระบบจำลองแนวโน้มแบบความน่าจะเป็น (Probabilistic Distribution) กว่า 10,000 สถานการณ์ ว่าคุณมีโอกาส 85% ที่จะเงินพอใช้ถึงวันเงินเดือนออก โดยคำนวณ Burn Rate เฉลี่ย ฿420/วัน พร้อมนับถอยหลัง 18 วันเงินเดือนออก",
+    techBadge: "Monte Carlo Simulation & Smooth Budget Re-balancing",
+    category: "Financial Runway & Daily Budget",
+    title: "แปลงกระแสเงินสดเป็น 'ยอดใช้ได้ต่อวัน' พร้อมเกลี่ยชดเชยนุ่มนวล",
+    highlightPhrase: "รู้ยอดที่ใช้ได้ทุกเช้า หากวันไหนใช้เกินจะค่อยๆ เกลี่ยชดเชย ไม่ทำให้ตกใจ",
+    description: "คำนวณให้เห็นชัดเจนล่วงหน้าว่าเงินจะพอถึงวันเงินเดือนออกไหม แล้วแปลงเป็น 'ยอดใช้ได้ต่อวัน' ให้เห็นง่ายๆ ทุกเช้า เช่น วันนี้ใช้ได้ ฿420 หากวันไหนใช้เกิน ระบบจะไม่ฟันธงว่าเงินจะหมดให้ตกใจ แต่จะค่อยๆ ลดยอดของวันถัดๆ ไปทีละนิด เพื่อชดเชยแบบนุ่มนวล ไม่กระทบวันเดียวหนักๆ",
     details: [
-      "แสดงกรอบความเชื่อมั่น Confidence Interval 3 ระดับ (Worst / Expected / Best)",
-      "คำนวณ Dynamic Daily Burn Rate แบบปรับตัวตามวันที่เหลือ",
-      "ระบบแจ้งเตือนล่วงหน้า (Early Warning) 7-14 วันก่อนเกิดวิกฤตเงินตึงมือ"
+      "แปลงเป็น Daily Safe-to-Spend เห็นยอดใช้ได้ชัดเจนทุกเช้า (฿420/วัน)",
+      "Smooth Re-balancing: เกลี่ยชดเชยวันถัดไปอย่างนุ่มนวลเมื่อใช้เกินงบ",
+      "จำลองความน่าจะเป็น 10,000 สถานการณ์ มั่นใจเงินพอถึงสิ้นเดือน 85%"
     ],
     metrics: [
+      { label: "ยอดใช้ได้วันนี้", value: "฿420 / วัน", sublabel: "หากใช้ไม่เกินนี้ เงินพอแน่นอน" },
       { label: "Runway Safe Zone", value: "85%", sublabel: "โอกาสรอดถึงวันเงินเดือนออก" },
-      { label: "Burn Rate เฉลี่ย", value: "฿420 / วัน", sublabel: "อัตราการใช้เงินที่ปลอดภัย" },
       { label: "นับถอยหลัง", value: "18 วัน", sublabel: "ก่อนเงินเดือนรอบถัดไปเข้า" }
     ]
   },
@@ -57,17 +57,17 @@ export const SCROLLY_STEPS: ScrollyStep[] = [
     id: 3,
     stepNumber: "03",
     techBadge: "Least-Disruptive Intervention (LDI) Engine",
-    category: "Safe-to-Sweep & Recommendation",
-    title: "คำนวณเงินสดปลอดภัย (Safe-to-Sweep) และแนะแนว Action",
-    highlightPhrase: "ตรวจพบเงินเย็นที่ไม่เสี่ยง พร้อมทางเลือกที่เจ็บปวดน้อยที่สุด",
-    description: "ระบบสแกนหากระแสเงินสดส่วนเกินที่ไม่มีความเสี่ยงต้องใช้ (Safe-to-Sweep) และเสนอ Action ที่กระทบวิถีชีวิตน้อยที่สุด เช่น 'ลด Food Delivery ลงวันละ 80 บาท จะดันความปลอดภัยขึ้นเป็น 92%' พร้อมเสนอออมเงินเย็น 150 บาทเข้ากระเป๋าเป้าหมาย",
+    category: "Leftover Surplus Detection & Action",
+    title: "ตรวจจับเงินเหลือจริงสิ้นวัน (Safe-to-Sweep) และแนะแนว Action",
+    highlightPhrase: "หากวันไหนใช้ต่ำกว่างบ ระบบจะคำนวณเงินส่วนเกินที่ปลอดภัยสำหรับออม",
+    description: "หากวันไหนผู้ใช้ใช้เงินน้อยกว่ายอดแนะนำ ระบบจะตรวจพบเงินเหลือจริงสิ้นวัน (Safe-to-Sweep) โดยหักสำรองหนี้สินและบิลล่วงหน้า 100% แล้วยื่นข้อเสนอแนะที่กระทบวิถีชีวิตน้อยที่สุด เช่น 'วันนี้มีเงินเหลือ ฿150 สนใจย้ายไปกระเป๋าเป้าหมายไหม' พร้อมคำแนะนำ LDI",
     details: [
+      "ตรวจจับเงินเหลือจริงเมื่อใช้จ่ายต่ำกว่า Daily Budget ที่แนะนำ",
       "คำนวณ Safe-to-Sweep โดยหักสำรองหนี้สินและบิลที่จ่อตัดล่วงหน้า 100%",
-      "อัลกอริทึม LDI เลือกตัดค่าใช้จ่ายในหมวดที่สร้างความสุขน้อยแต่เสียเงินเยอะ",
-      "แนะแนวการเร่งเป้าหมาย เช่น ย้ายเงินเข้า 'Pocket เที่ยวญี่ปุ่น' เร็วขึ้น 3 วัน"
+      "อัลกอริทึม LDI ชี้แนะการปรับพฤติกรรมเล็กๆ ที่เพิ่มความปลอดภัยได้สูงสุด"
     ],
     metrics: [
-      { label: "ตรวจพบ Safe-to-Sweep", value: "฿150", sublabel: "เงินเย็นปลอดภัยสำหรับวันนี้" },
+      { label: "ตรวจพบเงินเหลือจริง", value: "฿150", sublabel: "Safe-to-Sweep ปลอดภัยสำหรับวันนี้" },
       { label: "LDI Target", value: "-฿80/วัน", sublabel: "ลด Food Delivery" },
       { label: "ผลลัพธ์ Safe Zone", value: "↗ 92%", sublabel: "ความปลอดภัยเพิ่มขึ้นทันที" }
     ]
@@ -75,20 +75,20 @@ export const SCROLLY_STEPS: ScrollyStep[] = [
   {
     id: 4,
     stepNumber: "04",
-    techBadge: "Bounded Consent Framework & PDPA Tokenization",
-    category: "Co-pilot User Approval",
-    title: "ยืนยันการออมด้วยความยินยอมของผู้ใช้ (Co-pilot Approval)",
-    highlightPhrase: "เงินของคุณ อยู่ภายใต้การตัดสินใจของคุณเสมอ ไม่ตัดเงินสุ่มสี่สุ่มห้า",
-    description: "ปฏิวัติการออมแบบมัดมือชก! K-Runway ออกแบบตามหลัก Bounded Consent ผู้ใช้สามารถกดอนุมัติแบบ 1-Tap (Slide to Sweep) หรือตั้งเพดานความยินยอมล่วงหน้า เช่น 'อนุญาตให้ออมเฉพาะวันที่ความปลอดภัย > 80% และยอดไม่เกิน 150 บ./ครั้ง'",
+    techBadge: "100% User-Controlled Consent & Co-pilot Model",
+    category: "Human-in-the-Loop Approval",
+    title: "ไม่หักเงินเองเด็ดขาด! ผู้ใช้เป็นผู้กดยืนยันการออมเองทุกครั้ง",
+    highlightPhrase: "ระบบจะไม่ตัดเงินไปเก็บเองโดยพลการ คุณเป็นผู้มีอำนาจตัดสินใจ 100%",
+    description: "ออกแบบจากข้อมูลจริงว่าผู้ใช้ไม่ชอบให้แอปแอบตัดเงินไปเก็บเองโดยไม่บอกล่วงหน้าเพราะรู้สึกคุมเงินไม่ได้ K-Runway จึงทำหน้าที่เป็น Co-pilot คอยคำนวณและแนะนำให้ดูเท่านั้น หากต้องการออมเงินส่วนที่เหลือ ผู้ใช้ต้องเป็นคนกดยืนยัน (1-Tap / Slide to Save) ด้วยตัวเองทุกครั้ง",
     details: [
-      "ระบบ Co-pilot: AI มีหน้าที่วิเคราะห์และเสนอแนะ มนุษย์เป็นผู้อนุมัติ",
-      "ตั้งเกณฑ์ Bounded Consent: กำหนดเพดานวงเงิน, เงื่อนไขความปลอดภัย, และความถี่",
-      "ได้รับความยินยอมตามมาตรฐาน PDPA พร้อมเข้ารหัส Consent Token บน Secure Enclave"
+      "Zero Forced Auto-Debit: ระบบไม่หักเงินไปออมเองเด็ดขาดทุกกรณี",
+      "1-Tap Manual Confirmation: กดยืนยันออมเงินเหลือได้ง่ายๆ ใน 1 วินาที",
+      "Bounded Rules: ตั้งเงื่อนไขช่วยคัดกรอง เช่น ถามออมเฉพาะวันที่ Runway > 80%"
     ],
     metrics: [
-      { label: "สิทธิการอนุมัติ", value: "100%", sublabel: "ผู้ใช้ควบคุมได้ทุกขั้นตอน" },
-      { label: "Bounded Floor", value: "Runway > 80%", sublabel: "หยุดออมทันทีถ้าความปลอดภัยต่ำ" },
-      { label: "Max Sweep Cap", value: "≤ ฿150 / ครั้ง", sublabel: "เพดานการกวาดเงินต่อครั้ง" }
+      { label: "สิทธิการตัดสินใจ", value: "100%", sublabel: "ผู้ใช้ควบคุมได้ทุกขั้นตอน" },
+      { label: "ความโปร่งใส", value: "Zero Surprise", sublabel: "ไม่ตัดเงินโดยพลการเด็ดขาด" },
+      { label: "Max Sweep Cap", value: "≤ ฿150 / ครั้ง", sublabel: "เพดานเงินออมที่แนะนำต่อวัน" }
     ]
   },
   {
@@ -96,9 +96,9 @@ export const SCROLLY_STEPS: ScrollyStep[] = [
     stepNumber: "05",
     techBadge: "Multi-tier Routing & Liquidity Shield",
     category: "Multi-tier Routing & Shield",
-    title: "ป้องกันสภาพคล่องด้วย Liquidity Shield และ Reverse Sweep",
+    title: "คุ้มกันสภาพคล่องด้วย Liquidity Shield และ Reverse Sweep",
     highlightPhrase: "การันตีไม่มีวันเงินติดลบ พร้อมปุ่มดึงเงินกลับใน 24 ชั่วโมง",
-    description: "เงินส่วนเกินจะถูกส่งต่อไปยังบัญชีดอกเบี้ยสูง K-eSavings (1.5%) หรือ Cloud Pocket ที่ตั้งไว้ โดยมี Hard Floor คุ้มกันเงินติดบัญชีขั้นต่ำ ฿1,000 เสมอ และหากมีเหตุฉุกเฉิน ระบบมี Reverse Sweep ดึงเงินกลับเข้าบัญชีหลักอัตโนมัติทันที พร้อมปุ่ม Undo ภายใน 24 ชม.",
+    description: "เมื่อผู้ใช้กดยืนยันออม เงินส่วนเกินจะย้ายไปรับดอกเบี้ยสูงใน K-eSavings (1.5% ต่อปี) โดยระบบมี Hard Floor คุ้มกันเงินติดบัญชีหลัก ฿1,000 เสมอ และหากมีเหตุฉุกเฉิน ระบบมี Reverse Sweep และปุ่ม Undo คอยดึงเงินกลับเข้าบัญชีหลักได้ทันที ไร้ค่าธรรมเนียม",
     details: [
       "Hard Floor Protection: บัญชีหลักจะมีเงินกันชนขั้นต่ำ 1,000 บาทเสมอ",
       "Reverse Sweep Engine: ดึงเงินจากกระเป๋าออมกลับมาให้อัตโนมัติเมื่อตรวจพบการรูดฉุกเฉิน",
@@ -106,7 +106,7 @@ export const SCROLLY_STEPS: ScrollyStep[] = [
     ],
     metrics: [
       { label: "Hard Floor Buffer", value: "฿1,000", sublabel: "คุ้มกันติดบัญชีหลักเสมอ" },
-      { label: "ผลตอบแทนดอกเบี้ย", value: "1.50% p.a.", sublabel: "โอนเข้า K-eSavings อัตโนมัติ" },
+      { label: "ผลตอบแทนดอกเบี้ย", value: "1.50% p.a.", sublabel: "โอนเข้า K-eSavings เมื่อยืนยัน" },
       { label: "Reverse Sweep & Undo", value: "24 ชั่วโมง", sublabel: "ดึงเงินกลับได้ใน 1 คลิก" }
     ]
   }

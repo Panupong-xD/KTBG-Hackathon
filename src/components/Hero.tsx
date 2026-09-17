@@ -23,13 +23,13 @@ export default function Hero() {
           {/* Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-extrabold text-slate-900 tracking-tight max-w-5xl leading-[1.22] sm:leading-[1.18]">
             <span className="inline-block">รู้ล่วงหน้าว่าเงินจะพอ</span><span className="inline-block">ถึงสิ้นเดือนไหม</span> <br className="hidden sm:inline" />
-            <span className="inline-block">พร้อมให้ AI ช่วยเก็บเงินส่วนเกิน</span> <br className="hidden sm:inline" />
+            <span className="inline-block">พร้อม AI แนะนำออมเงินที่คุณอนุมัติเองได้</span> <br className="hidden sm:inline" />
             <span className="text-[#00A950] inline-block">แบบปลอดภัย ไร้กังวล</span>
           </h1>
 
           {/* Sub-headline tailored to First Jobbers */}
           <p className="mt-6 text-base sm:text-lg text-slate-600 max-w-3xl leading-relaxed font-normal">
-            เปลี่ยนแอป <strong className="text-slate-900 font-bold">K PLUS</strong> ให้ไม่ใช่แค่สมุดบัญชีที่ดูเงินในอดีต แต่ใช้ Machine Learning พยากรณ์กระแสเงินสดล่วงหน้า ตรวจจับเงินเหลือที่ปลอดภัย <span className="text-[#00A950] font-bold underline decoration-[#00A950] decoration-2 underline-offset-4">(Safe-to-Sweep)</span> แล้วแนะแนวการออมแบบกึ่งอัตโนมัติ ช่วยให้ <span className="text-slate-900 font-bold">First Jobbers</span> ตัดสินใจทางการเงินได้อย่างมั่นใจ ภายใต้การอนุมัติของคุณ
+            เปลี่ยนแอป <strong className="text-slate-900 font-bold">K PLUS</strong> ให้ไม่ใช่แค่สมุดบัญชีที่ดูเงินในอดีต แต่ใช้ Machine Learning คำนวณ <strong className="text-slate-900 font-bold">ยอดใช้จ่ายที่ปลอดภัยต่อวัน</strong> ล่วงหน้าถึงวันเงินเดือนออก พร้อมตรวจจับเงินเหลือจริง <span className="text-[#00A950] font-bold underline decoration-[#00A950] decoration-2 underline-offset-4">(Safe-to-Sweep)</span> และยื่นปุ่มแนะนำให้คุณกดยืนยันออมด้วยตัวเอง 100% ไม่หักเงินโดยพลการ ช่วยให้ <span className="text-slate-900 font-bold">First Jobbers</span> คุมเงินได้อย่างมั่นใจ
           </p>
 
           {/* Action CTA Buttons */}
@@ -69,8 +69,8 @@ export default function Hero() {
                 <Lock className="w-6 h-6" />
               </div>
               <div>
-                <div className="text-sm font-bold text-slate-900">PDPA & Bounded Consent</div>
-                <div className="text-xs text-slate-500 mt-0.5">คุณกำหนดเพดานเงินและเงื่อนไขเอง 100%</div>
+                <div className="text-sm font-bold text-slate-900">100% User Consent</div>
+                <div className="text-xs text-slate-500 mt-0.5">ไม่หักเงินเองเด็ดขาด คุณกดยืนยันเองทุกครั้ง</div>
               </div>
             </div>
 
@@ -79,8 +79,8 @@ export default function Hero() {
                 <Gauge className="w-6 h-6" />
               </div>
               <div>
-                <div className="text-sm font-bold text-slate-900">Probabilistic ML Forecasting</div>
-                <div className="text-xs text-slate-500 mt-0.5">จำลองกระแสเงินสด 10,000 รูปแบบล่วงหน้า</div>
+                <div className="text-sm font-bold text-slate-900">Dynamic Runway Intelligence</div>
+                <div className="text-xs text-slate-500 mt-0.5">บอกยอดใช้ได้ต่อวัน เกลี่ยชดเชยนุ่มนวลเมื่อเกิน</div>
               </div>
             </div>
 

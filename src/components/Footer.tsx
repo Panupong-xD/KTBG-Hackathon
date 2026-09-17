@@ -24,13 +24,13 @@ export default function Footer() {
                   className="h-full w-full object-contain"
                 />
               </div>
-              <div>
-                <span className="font-extrabold text-slate-900 text-base">
+              <div className="flex flex-col justify-center">
+                <span className="font-extrabold text-slate-900 text-base leading-none">
                   K-Runway <span className="text-[#00A950]">&</span> Auto-Save
                 </span>
-                <div className="text-[10px] font-bold text-[#00A950] tracking-wider uppercase">
+                <span className="text-[10px] font-bold text-[#00A950] tracking-wider uppercase leading-none mt-1">
                   K PLUS Innovation Concept
-                </div>
+                </span>
               </div>
             </div>
             <p className="text-slate-600 text-xs leading-relaxed max-w-md">

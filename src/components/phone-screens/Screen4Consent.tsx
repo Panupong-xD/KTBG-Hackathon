@@ -25,8 +25,8 @@ export default function Screen4Consent() {
           <div className="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center mb-2 border border-emerald-400/30">
             <ShieldCheck className="w-5 h-5" />
           </div>
-          <h4 className="text-sm font-bold text-white">ยืนยันการกวาดเงินเย็น (Safe-to-Sweep)</h4>
-          <p className="text-[11px] text-slate-300 mt-0.5">ระบบจะไม่ตัดเงินโดยพลการหากไม่ได้รับความยินยอม</p>
+          <h4 className="text-sm font-bold text-white">ยืนยันนำเงินเหลือไปออม (1-Tap Save)</h4>
+          <p className="text-[11px] text-slate-300 mt-0.5">ระบบไม่หักเงินเองเด็ดขาด คุณเป็นผู้ตัดสินใจกดออมเอง</p>
         </div>
 
         {/* Amount Summary */}
@@ -40,7 +40,7 @@ export default function Screen4Consent() {
             <span className="text-emerald-400 font-semibold">Pocket ทริปโตเกียว</span>
           </div>
           <div className="pt-2 border-t border-slate-800 flex justify-between items-center">
-            <span className="text-xs font-semibold text-slate-300">ยอดเงินเย็นที่แนะนำ:</span>
+            <span className="text-xs font-semibold text-slate-300">เงินเหลือจริงที่แนะนำออม:</span>
             <span className="text-xl font-extrabold text-white">฿150.00</span>
           </div>
         </div>
@@ -56,11 +56,11 @@ export default function Screen4Consent() {
         >
           {isApproved ? (
             <>
-              <CheckCircle2 className="w-4 h-4" /> อนุมัติการกวาดเงินเรียบร้อย!
+              <CheckCircle2 className="w-4 h-4" /> ยืนยันการออมเงินเรียบร้อย!
             </>
           ) : (
             <>
-              <span>สไลด์หรือแตะเพื่ออนุมัติ (Slide to Sweep)</span>
+              <span>แตะเพื่อยืนยันออมเงิน ฿150 (Tap to Save)</span>
               <ChevronRight className="w-4 h-4 animate-pulse" />
             </>
           )}
@@ -78,14 +78,14 @@ export default function Screen4Consent() {
 
         <div className="space-y-2 text-[11px]">
           <div className="flex items-center justify-between p-2 rounded-lg bg-slate-900/50 border border-slate-700/40">
-            <span className="text-slate-300">อนุญาตเฉพาะวันที่ Runway &gt; 80%</span>
+            <span className="text-slate-300">ถามออมเฉพาะวันที่ Runway &gt; 80%</span>
             <div className="w-7 h-4 bg-emerald-500 rounded-full flex items-center justify-end px-0.5">
               <div className="w-3 h-3 bg-white rounded-full shadow-sm" />
             </div>
           </div>
 
           <div className="flex items-center justify-between p-2 rounded-lg bg-slate-900/50 border border-slate-700/40">
-            <span className="text-slate-300">เพดานการออมสูงสุดไม่เกิน ฿150 / ครั้ง</span>
+            <span className="text-slate-300">เพดานการออมสูงสุดไม่เกิน ฿150 / วัน</span>
             <div className="w-7 h-4 bg-emerald-500 rounded-full flex items-center justify-end px-0.5">
               <div className="w-3 h-3 bg-white rounded-full shadow-sm" />
             </div>

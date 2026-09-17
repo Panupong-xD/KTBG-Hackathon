@@ -34,17 +34,15 @@ export default function Navbar() {
                 alt="KBank Web Icon"
                 className="h-10 w-10 object-contain group-hover:scale-105 transition-transform shrink-0"
               />
-              <div className="flex flex-col">
+              <div className="flex flex-col justify-center">
                 <div className="font-extrabold text-slate-900 text-base sm:text-lg tracking-tight leading-none flex items-center gap-1.5">
                   <span>K-Runway</span>
                   <span className="text-[#00A950] font-bold">&</span>
                   <span>Auto-Save</span>
                 </div>
-                <div className="mt-1">
-                  <span className="text-[10px] font-bold text-[#00A950] tracking-wider uppercase">
-                    K PLUS Innovation
-                  </span>
-                </div>
+                <span className="text-[10px] font-bold text-[#00A950] tracking-wider uppercase leading-none mt-1">
+                  K PLUS Innovation
+                </span>
               </div>
             </a>
           </div>

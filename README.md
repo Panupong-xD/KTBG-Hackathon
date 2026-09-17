@@ -17,7 +17,7 @@
 
 Traditional retail banking applications operate almost exclusively in a retrospective manner, presenting static current balances and historical transaction ledgers. This system shifts the operational paradigm from backward-looking record-keeping to **forward-looking predictive cash-flow co-piloting**.
 
-By integrating **Time-Series Classification**, **Monte Carlo Probabilistic Trajectory Forecasting**, and **Least-Disruptive Intervention (LDI)** algorithms, the platform predicts 30-day liquidity runways, eliminates month-end overdraft hazards, and automatically siphons verified micro-surpluses into high-yield savings under strict **Bounded Consent** protocols.
+By integrating **Time-Series Classification**, **Monte Carlo Probabilistic Trajectory Forecasting**, **Smooth Budget Re-balancing**, and **Least-Disruptive Intervention (LDI)** algorithms, the platform predicts cash-flow runways, eliminates month-end overdraft hazards, and prompts users to verify end-of-day micro-surpluses into high-yield savings under strict **100% User Consent** protocols (zero forced auto-debits).
 
 ---
 
@@ -28,7 +28,7 @@ Early-career professionals encounter four recurring behavioral and structural fi
 1. **Static Balance Trap**: Checking accounts display an aggregated balance (e.g., ฿15,000) that gives a false sense of solvency, failing to deduct impending fixed obligations (dormitory rent, utility bills, card settlements) totaling ฿12,000 due over the following 18 days.
 2. **Income & Discretionary Volatility**: Strict heuristic budgeting models (such as fixed 50/30/20 distributions) collapse because early-career social commitments and unexpected onboarding expenses do not follow uniform distributions.
 3. **Present Bias & Ineffective Accumulation**: Deferring savings until month-end consistently results in zero capital accumulation. Conversely, rigid calendar-based auto-debits introduce overdraft risks, prompting early liquidation of reserve funds.
-4. **Non-Actionable Advisory Systems**: Traditional banking advisory notifications offer generic recommendations without quantifying specific spending adjustments or assessing their impact on day-to-day welfare.
+4. **Loss of Agency & Trust**: Retail customers consistently reject automated account debits that execute without explicit, real-time user verification, feeling a perceived loss of financial autonomy.
 
 ---
 
@@ -40,25 +40,27 @@ Early-career professionals encounter four recurring behavioral and structural fi
          +---------------------------+---------------------------+
          |                                                       |
  [ PILLAR 01 : THE BRAIN ]                               [ PILLAR 02 : THE ACTUATOR ]
-      Dynamic Runway                                      Micro-Surplus Sweeping
- (Predictive Telemetry Engine)                           (Checking to Locked Vault)
+      Dynamic Runway                                      Micro-Surplus Co-pilot
+ (Predictive Telemetry Engine)                           (Smart Prompt & 1-Tap Save)
          |                                                       |
   • Monte Carlo 10,000 Sim                                • Daily Budget Calibration (฿380)
-  • Dynamic Daily Burn Rate                               • Micro-Surplus Detection (+฿150)
-  • Early Warning Horizon (Day 21)                        • Hard Floor Reserve (฿1,000)
-  • Safe Zone Touchdown (Day 30)                          • Reverse Sweep Circuit (Auto-Refund)
+  • Smooth Budget Re-balancing                            • Leftover Surplus Detection (+฿150)
+  • Early Warning Horizon (Day 21)                        • Zero Forced Debit (1-Tap Confirm)
+  • Safe Zone Touchdown (Day 30)                          • Hard Floor Reserve & Reverse Sweep
 ```
 
 ### Pillar 01: Dynamic Runway (Predictive Telemetry Engine)
 - **Monte Carlo & Bayesian Forecasting**: Executes 10,000 forward simulations across every billing cycle, factoring in scheduled commitments, probabilistic recurring expenses, and historical variance.
 - **Adaptive Daily Burn Rate**: Dynamically calculates a safe-to-spend daily operating budget (e.g., ฿380/day) that flexes according to remaining days and upcoming obligations.
-- **Early Warning Horizon**: Flags impending cash-flow inflection points 7 to 14 days in advance, mitigating the typical Day 21 month-end liquidity drop before the danger zone (sub-฿1,000) is breached.
+- **Smooth Budget Re-balancing**: When daily spending exceeds the recommended limit, the model avoids panic alerts and gently re-distributes minor adjustments across subsequent days to absorb variance smoothly.
+- **Cold-Start Onboarding Support**: For new accounts without transaction history, a 2-question baseline onboarding (estimated income and fixed rent) provides immediate, conservative runway forecasting.
 
-### Pillar 02: Micro-Surplus Sweeping & Shield (Automated Execution Circuit)
-- **Safe-to-Sweep Siphoning**: Isolates unencumbered surplus capital (e.g., ฿150/day) that can be removed from daily checking without altering routine lifestyle patterns.
-- **High-Yield Target Account**: Directs accumulated capital into an interest-bearing account (K-eSavings at 1.50% p.a.).
-- **Hard Floor Liquidity Anchor**: Establishes a strict ฿1,000 baseline reserve in the primary checking account that is permanently preserved.
-- **Reverse Sweep Circuit**: If sudden mandatory debits or unexpected expenditures occur, funds in the savings vault are automatically swept back to checking, enforcing a **Zero-Overdraft Guarantee**.
+### Pillar 02: Micro-Surplus Co-pilot & Shield (Human-in-the-Loop Execution)
+- **Leftover Surplus Detection**: Isolates actual end-of-day surplus capital (e.g., ฿150/day) generated when daily spending remains below the recommended burn rate.
+- **Zero Forced Debit Policy**: The system never debits accounts autonomously. It displays a clear prompt, requiring explicit 1-tap user confirmation for every sweep.
+- **High-Yield Target Account**: Directs user-confirmed savings into an interest-bearing account (K-eSavings at 1.50% p.a.).
+- **Hard Floor Liquidity Anchor**: Establishes an unbreachable ฿1,000 baseline reserve in the primary checking account that is permanently preserved.
+- **Reverse Sweep & Undo Circuit**: If unforeseen expenditures occur, funds can be immediately returned to checking in 1 click or undone within 24 hours, enforcing a **Zero-Overdraft Guarantee**.
 
 ---
 
@@ -66,11 +68,11 @@ Early-career professionals encounter four recurring behavioral and structural fi
 
 | Phase | Designation | Core Algorithmic Framework | Operational Output |
 | :---: | :--- | :--- | :--- |
-| **01** | **Data Ingestion & Parsing** | Time-Series Classification & NLP Parser | Categorizes transactions into Fixed Obligations vs. Discretionary Spikes with 98.4% model accuracy. |
-| **02** | **Cash-Flow Runway** | Monte Carlo Simulation & Bayesian Forecasting | Projects survival probability into a quantified Safe Zone percentage (85%) alongside a real-time payday countdown. |
-| **03** | **Safe-to-Sweep & LDI** | Least-Disruptive Intervention (LDI) Engine | Detects idle micro-surpluses and computes targeted spending adjustments that produce maximum liquidity with minimal lifestyle disruption. |
-| **04** | **Co-pilot Consent** | Bounded Consent & PDPA Governance | Requires explicit user authorization for transaction parameters, maintaining human-in-the-loop oversight. |
-| **05** | **Liquidity Shield** | Bi-directional Automated Sweeping Circuit | Executes daily micro-accumulation at 1.50% p.a. yield with automated Reverse Sweep recovery when required. |
+| **01** | **Data Ingestion & Cold Start** | Time-Series Classification & 2-Question Onboarding | Categorizes transactions (98.4% accuracy) and initializes immediate conservative budgets for zero-history accounts. |
+| **02** | **Cash-Flow Runway & Re-balancing** | Monte Carlo Simulation & Dynamic Re-calibration | Projects survival probability (85% Safe Zone) into daily safe budgets with smooth post-overspending compensation. |
+| **03** | **Leftover Detection & LDI** | Least-Disruptive Intervention (LDI) Engine | Detects verified end-of-day leftover surpluses and computes targeted lifestyle micro-adjustments. |
+| **04** | **Co-pilot 1-Tap Consent** | Human-in-the-Loop Bounded Consent & PDPA | Strictly requires user-initiated 1-tap confirmation before executing any transfer (zero surprise debits). |
+| **05** | **Liquidity Shield & Yield** | Multi-Tier Savings Routing & Reverse Sweep | Accumulates user-approved funds at 1.50% p.a. yield backed by an unbreachable ฿1,000 Hard Floor and instant recovery. |
 
 ---
 

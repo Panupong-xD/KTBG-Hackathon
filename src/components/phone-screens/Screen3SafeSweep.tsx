@@ -24,13 +24,13 @@ export default function Screen3SafeSweep() {
         <div className="flex items-start justify-between">
           <div>
             <span className="text-[11px] text-emerald-300 font-semibold tracking-wide uppercase flex items-center gap-1">
-              <ShieldCheck className="w-3.5 h-3.5" /> ตรวจพบเงินเย็นปลอดภัย (Safe-to-Sweep)
+              <ShieldCheck className="w-3.5 h-3.5" /> ตรวจพบเงินเหลือสิ้นวัน (Safe-to-Sweep)
             </span>
             <div className="text-3xl font-black text-white mt-1 tracking-tight">
               ฿150.00
             </div>
             <p className="text-[11px] text-slate-300 mt-1">
-              คำนวณหักบิลค่าเช่า, หนี้สิน และบัตรเครดิตล่วงหน้าครบ 100% แล้ว
+              คำนวณจากวันที่ใช้ต่ำกว่างบ และหักบิลล่วงหน้าครบ 100% แล้ว
             </p>
           </div>
           <div className="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-300 font-bold">
@@ -39,8 +39,8 @@ export default function Screen3SafeSweep() {
         </div>
 
         <div className="mt-3 pt-2.5 border-t border-slate-700/60 flex items-center justify-between text-[11px]">
-          <span className="text-slate-400">Zero-Risk Buffer:</span>
-          <span className="font-semibold text-emerald-400">ปลอดภัย 100% ไม่กระทบชีวิต</span>
+          <span className="text-slate-400">เงินเหลือจริง:</span>
+          <span className="font-semibold text-emerald-400">ปลอดภัยสำหรับกดยืนยันออม</span>
         </div>
       </div>
 

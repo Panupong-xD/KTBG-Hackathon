@@ -43,7 +43,7 @@ export default function FeatureDeepDive() {
                 Dynamic Runway : เรดาร์ประคองวิถีการเงิน
               </h3>
               <p className="text-xs sm:text-sm text-slate-500 mb-6">
-                พยากรณ์วิถีการเงิน 30 วันล่วงหน้า เพื่อประคองกระแสเงินสดให้อยู่เหนือโซนอันตรายเสมอ
+                คำนวณยอดใช้ได้ต่อวันล่วงหน้า พร้อมระบบเกลี่ยชดเชยอย่างนุ่มนวลเมื่อใช้เกิน ไม่ทำให้ตกใจ
               </p>
 
               {/* Aeronautical Glide-Slope SVG Stage (Frameless) */}
@@ -187,14 +187,14 @@ export default function FeatureDeepDive() {
                 <span className="text-xs font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
                   PILLAR 02 : THE ACTUATOR
                 </span>
-                <span className="text-xs font-medium text-slate-400">Auto-Save Engine</span>
+                <span className="text-xs font-medium text-slate-400">Savings Co-pilot</span>
               </div>
 
               <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight mb-1">
-                Micro-Surplus Sweeping : บัญชีหลักสู่ตู้เซฟเงินออม
+                Micro-Surplus Co-pilot : บัญชีหลักสู่ตู้เซฟเงินออม
               </h3>
               <p className="text-xs sm:text-sm text-slate-500 mb-6">
-                กวาดเฉพาะเงินเย็นที่ล้นเกินเกณฑ์ไปออม โดยมีแผงเหล็กคุ้มกันเงินสำรองก้นบัญชีไว้ 100%
+                ระบบไม่หักเงินเองเด็ดขาด ตรวจพบเงินเหลือสิ้นวันแล้วถามให้กดยืนยันออม พร้อม Hard Floor คุ้มกัน 100%
               </p>
 
               {/* Stage: Clean Symbolic Vector Infographic (Wallet ➔ Smart Sweep ➔ Locked Vault) */}
@@ -216,7 +216,7 @@ export default function FeatureDeepDive() {
                     </text>
                     
                     <text x="280" y="22" textAnchor="middle" fill="#94A3B8" fontSize="9.5" fontWeight="bold" letterSpacing="0.4">
-                      AUTO-SWEEP PROTOCOL
+                      1-TAP SAVINGS PROTOCOL
                     </text>
 
                     <text x="360" y="22" fill="#0F172A" fontSize="11" fontWeight="bold">
@@ -235,13 +235,13 @@ export default function FeatureDeepDive() {
                     <rect x="30" y="66" width="165" height="48" rx="10" fill="#ECFDF5" stroke="#A7F3D0" strokeWidth="1" />
                     <text x="42" y="86" fill="#065F46" fontSize="10" fontWeight="bold">Micro-Surplus</text>
                     <text x="183" y="87" textAnchor="end" fill="#008744" fontSize="13" fontWeight="900">+฿150</text>
-                    <text x="42" y="102" fill="#059669" fontSize="8">ส่วนเกินตัดออมรายวัน</text>
+                    <text x="42" y="102" fill="#059669" fontSize="8">ส่วนเกินแนะนำให้ออม</text>
 
                     {/* Tier 2: Daily Budget (Operating) */}
                     <rect x="30" y="126" width="165" height="48" rx="10" fill="#F8FAFC" stroke="#E2E8F0" strokeWidth="1" />
                     <text x="42" y="146" fill="#334155" fontSize="10" fontWeight="bold">Daily Budget</text>
                     <text x="183" y="147" textAnchor="end" fill="#0F172A" fontSize="13" fontWeight="900">฿380</text>
-                    <text x="42" y="162" fill="#64748B" fontSize="8">งบใช้ชีวิตกินอยู่ปกติ</text>
+                    <text x="42" y="162" fill="#64748B" fontSize="8">งบใช้ชีวิตประจำวัน</text>
 
                     {/* Tier 3: Hard Floor Shield (Protection) */}
                     <rect x="30" y="186" width="165" height="68" rx="10" fill="#EFF6FF" stroke="#BFDBFE" strokeWidth="1" />
@@ -257,7 +257,7 @@ export default function FeatureDeepDive() {
                     <path d="M 205 90 L 228 90" fill="none" stroke="#00A950" strokeWidth="2" strokeDasharray="3 2" />
                     <rect x="228" y="76" width="104" height="28" rx="14" fill="#00A950" filter="drop-shadow(0 2px 4px rgba(0,169,80,0.22))" />
                     <text x="280" y="90" dominantBaseline="central" textAnchor="middle" fill="#FFFFFF" fontSize="10.5" fontWeight="bold">
-                      Smart Sweep ➔
+                      1-Tap Save ➔
                     </text>
                     <path d="M 332 90 L 350 90" fill="none" stroke="#00A950" strokeWidth="2" markerEnd="url(#arrowGreen)" />
 
@@ -329,8 +329,8 @@ export default function FeatureDeepDive() {
                 <strong className="text-blue-800 font-bold">Hard Floor ฿1,000 ปลอดภัย 100%</strong>
               </div>
               <div className="bg-emerald-50/70 border border-emerald-200/80 rounded-xl p-2.5 text-center">
-                <span className="text-slate-500 block text-[11px] font-medium">Auto-Savings Growth</span>
-                <strong className="text-[#008744] font-bold">รับดอกเบี้ย 1.50% ต่อปีอัตโนมัติ</strong>
+                <span className="text-slate-500 block text-[11px] font-medium">1-Tap High Yield</span>
+                <strong className="text-[#008744] font-bold">รับดอกเบี้ย 1.50% ต่อปีเมื่อยืนยัน</strong>
               </div>
             </div>
           </div>
@@ -364,22 +364,22 @@ export default function FeatureDeepDive() {
                   1. Predictive Time-Series
                 </div>
                 <h4 className="text-sm font-bold text-slate-900 mb-1">
-                  Monte Carlo & Adaptive Burn Rate
+                  Monte Carlo & Smooth Re-balancing
                 </h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  จำลองพฤติกรรมการเงิน 10,000 ครั้งล่วงหน้า ผสานอัลกอริทึมวิเคราะห์บิลคงค้าง เพื่อคำนวณ Daily Burn Rate ที่แม่นยำและไม่ทำให้เงินสะดุด
+                  จำลองพฤติกรรมการเงิน 10,000 ครั้งล่วงหน้า แปลงเป็นยอดใช้ได้ต่อวัน หากวันไหนใช้เกินจะค่อยๆ เกลี่ยลดวันถัดไปอย่างนุ่มนวล ไม่ทำให้ตกใจ
                 </p>
               </div>
 
               <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
                 <div className="text-xs font-bold text-blue-600 mb-1 uppercase tracking-wide">
-                  2. Micro-Surplus Siphon
+                  2. Micro-Surplus Detection
                 </div>
                 <h4 className="text-sm font-bold text-slate-900 mb-1">
-                  Dynamic Threshold & Reverse Sweep
+                  End-of-Day Leftover & 1-Tap Save
                 </h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  กวาดเฉพาะเงินเย็นที่ล้นเกินเกณฑ์ประจำวัน และมีระบบ Reverse Sweep คอยดึงเงินคืนเข้าบัญชีหลักอัตโนมัติหากมีบิลด่วนฉุกเฉินเข้ามา
+                  สแกนหาเงินเหลือจริงเมื่อใช้น้อยกว่างบ ยื่นปุ่มแนะนำให้ออมโดยไม่หักเงินเอง และมี Reverse Sweep คอยคุ้มกันหากมีบิลด่วนฉุกเฉิน
                 </p>
               </div>
 
