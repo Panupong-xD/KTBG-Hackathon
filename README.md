@@ -37,7 +37,7 @@ This repository fulfills the three core deliverables for the competition:
 
 Early-career professionals encounter four recurring behavioral and structural financial bottlenecks:
 
-1. **Static Balance Trap**: Checking accounts display an aggregated balance (e.g., ฿15,000) that gives a false sense of solvency, failing to deduct impending fixed obligations (dormitory rent, utility bills, card settlements) totaling ฿12,000 due over the following 18 days.
+1. **Static Balance Trap**: Checking accounts display an aggregated balance (e.g., ฿15,000) that gives a false sense of solvency, failing to deduct impending fixed obligations (dormitory rent, utility bills, card settlements) totaling ฿7,160 due over the following 18 days.
 2. **Income & Discretionary Volatility**: Strict heuristic budgeting models (such as fixed 50/30/20 distributions) collapse because early-career social commitments and unexpected onboarding expenses do not follow uniform distributions.
 3. **Present Bias & Ineffective Accumulation**: Deferring savings until month-end consistently results in zero capital accumulation. Conversely, rigid calendar-based auto-debits introduce overdraft risks, prompting early liquidation of reserve funds.
 4. **Loss of Agency & Trust**: Retail customers consistently reject automated account debits that execute without explicit, real-time user verification, feeling a perceived loss of financial autonomy.

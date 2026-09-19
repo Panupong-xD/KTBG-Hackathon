@@ -16,13 +16,12 @@ export default function InnovationConcept() {
           </span>
 
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
-            พร้อมเปลี่ยนพฤติกรรมการเงินของ<br />
-            " First Jobbers " <br />
-            ด้วย AI ที่รู้ใจคุณแล้วหรือยัง?
+            มองเห็นเส้นทางการเงินล่วงหน้า<br />
+            สร้างเงินออมก้อนแรกอย่างมั่นใจ
           </h2>
 
           <p className="mt-4 text-emerald-50 text-sm sm:text-base max-w-xl mx-auto leading-relaxed font-normal">
-            สัมผัสประสบการณ์ Financial Runway Intelligence ที่ช่วยให้คนเริ่มทำงานตัดสินใจทางการเงินได้อย่างมั่นใจ ไม่ต้องลุ้นสิ้นเดือน พร้อมเปลี่ยนเงินเศษเหลือเป็นเงินออมที่งอกเงยใน K PLUS
+            โดยที่คุณเป็นผู้ควบคุมและตัดสินใจเอง 100% ปราศจากการบังคับตัดเงินส่วนตัว ลื่นไหล ปลอดภัยตามมาตรฐานธนาคารกสิกรไทย
           </p>
 
           {/* Action Buttons (Restored without Early Prototype) */}

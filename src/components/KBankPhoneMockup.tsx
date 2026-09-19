@@ -187,31 +187,30 @@ export default function KBankPhoneMockup({ activeStep, onSelectStep }: KBankPhon
                       <div className="my-auto">
                         <div className="flex items-start justify-between mb-2 pb-1.5 border-b border-slate-100">
                           <div>
-                            <div className="text-[11px] font-medium text-slate-500 flex items-center gap-1">
-                              <span>ยอดเงินคงเหลือ</span>
-                              <span className="text-[9px] text-slate-400 font-normal">(เคสตัวอย่าง)</span>
+                            <div className="text-[11px] font-medium text-slate-500">
+                              ยอดเงินคงเหลือ
                             </div>
-                            <div className="text-lg font-extrabold text-slate-900">฿32,500.00</div>
+                            <div className="text-lg font-extrabold text-slate-900">฿15,000.00</div>
                           </div>
                           <div className="text-right">
                             <span className="text-[10px] font-semibold text-[#00A950] block">
                               AI Tagged
                             </span>
-                            <span className="text-[9px] text-slate-400">Fixed รวม ฿12,419</span>
+                            <span className="text-[9px] text-slate-400">Fixed รวม ฿7,160</span>
                           </div>
                         </div>
 
                         <div className="space-y-1.5 text-xs">
                           <div className="flex items-center justify-between">
-                            <span className="text-slate-700 font-medium text-[11px]">ค่าเช่าห้อง & บิลส่วนกลาง</span>
+                            <span className="text-slate-700 font-medium text-[11px]">ค่าเช่าหอพัก & ห้องพัก</span>
                             <span className="text-[11px] text-blue-700 font-semibold">
-                              Fixed -฿8,500
+                              Fixed -฿5,500
                             </span>
                           </div>
                           <div className="flex items-center justify-between">
-                            <span className="text-slate-700 font-medium text-[11px]">ค่าน้ำไฟ + ผ่อนบัตร/ของ</span>
+                            <span className="text-slate-700 font-medium text-[11px]">ค่าน้ำไฟ + เน็ต & บิลประจำ</span>
                             <span className="text-[11px] text-blue-700 font-semibold">
-                              Fixed -฿3,919
+                              Fixed -฿1,660
                             </span>
                           </div>
                         </div>

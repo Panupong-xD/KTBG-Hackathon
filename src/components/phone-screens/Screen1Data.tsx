@@ -15,14 +15,14 @@ export default function Screen1Data() {
           <span className="font-mono">xxx-2-89412-x</span>
         </div>
         <div className="text-2xl font-bold tracking-tight text-white mt-1">
-          ฿34,250.00
+          ฿15,000.00
         </div>
         <div className="flex items-center justify-between mt-2 pt-2 border-t border-emerald-500/30 text-[11px] text-emerald-100/90">
           <span className="flex items-center gap-1">
             <Sparkles className="w-3 h-3 text-amber-300" /> AI Classification Active
           </span>
           <span className="bg-emerald-950/50 px-2 py-0.5 rounded-full text-[10px] font-semibold text-emerald-300 border border-emerald-400/30">
-            98.4% Accuracy
+            98.4% Target*
           </span>
         </div>
       </div>
@@ -79,7 +79,7 @@ export default function Screen1Data() {
               <Home className="w-4 h-4" />
             </div>
             <div>
-              <div className="text-xs font-semibold text-slate-200">ค่าเช่าคอนโด Life Asoke</div>
+              <div className="text-xs font-semibold text-slate-200">ค่าเช่าหอพัก & ห้องพัก</div>
               <div className="flex items-center gap-1.5 mt-0.5">
                 <span className="text-[9px] bg-blue-500/20 text-blue-300 font-medium px-1.5 py-0.2 rounded border border-blue-500/30">
                   Fixed Obligation
@@ -89,7 +89,7 @@ export default function Screen1Data() {
             </div>
           </div>
           <div className="text-right">
-            <div className="text-xs font-bold text-rose-400">-฿8,500.00</div>
+            <div className="text-xs font-bold text-rose-400">-฿5,500.00</div>
             <div className="text-[9px] text-slate-400">จำเป็น</div>
           </div>
         </div>
@@ -123,7 +123,7 @@ export default function Screen1Data() {
               <Zap className="w-4 h-4" />
             </div>
             <div>
-              <div className="text-xs font-semibold text-slate-200">บิลค่าไฟ MEA การไฟฟ้านครหลวง</div>
+              <div className="text-xs font-semibold text-slate-200">บิลน้ำไฟ & ค่าเน็ต</div>
               <div className="flex items-center gap-1.5 mt-0.5">
                 <span className="text-[9px] bg-blue-500/20 text-blue-300 font-medium px-1.5 py-0.2 rounded border border-blue-500/30">
                   Fixed Utility
@@ -133,7 +133,7 @@ export default function Screen1Data() {
             </div>
           </div>
           <div className="text-right">
-            <div className="text-xs font-bold text-rose-400">-฿1,419.00</div>
+            <div className="text-xs font-bold text-rose-400">-฿1,660.00</div>
             <div className="text-[9px] text-slate-400">จำเป็น</div>
           </div>
         </div>

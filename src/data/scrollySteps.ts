@@ -22,15 +22,15 @@ export const SCROLLY_STEPS: ScrollyStep[] = [
     category: "Data Ingestion & Instant Cold Start",
     title: "วิเคราะห์ Transaction History และรองรับ Onboarding บัญชีใหม่",
     highlightPhrase: "แยกแยะค่าใช้จ่ายจำเป็น พร้อมระบบเริ่มใช้งานได้ตั้งแต่วันแรก",
-    description: "ระบบดึงประวัติการใช้จ่ายเพื่อจำแนกค่าใช้จ่ายจำเป็น (Fixed Obligations เช่น ค่าเช่า, บิล) ออกจากค่าใช้จ่ายผันแปร (Discretionary) และสำหรับ First Jobbers ที่เพิ่งเปิดบัญชีใหม่ ยังไม่มีประวัติ ระบบมี Quick Onboarding ตอบคำถามสั้นๆ 4 ข้อแบบกดเลือกช่วง (วันเงินเดือนออก, ช่วงรายได้, ภาระผ่อน/หนี้ประจำ, ความสม่ำเสมอของรายได้) เพื่อเริ่มคำนวณงบแบบระมัดระวังได้ทันที",
+    description: "ระบบดึงประวัติการใช้จ่ายเพื่อจำแนกค่าใช้จ่ายจำเป็น (Fixed Obligations เช่น ค่าเช่า, บิล) ออกจากค่าใช้จ่ายผันแปร (Discretionary) พร้อมระบบ Quick Onboarding ตอบ 4 คำถามสั้นแบบเลือกช่วงเพื่อเริ่มคำนวณงบทันทีสำหรับบัญชีเปิดใหม่",
     details: [
-      "เป้าหมายการจำแนกหมวดหมู่ด้วย Machine Learning (Target Benchmark 98.4%)",
+      "เป้าหมายการจำแนกหมวดหมู่ด้วย Machine Learning (Target Benchmark 98.4%*)",
       "Instant Cold Start: บัญชีใหม่กดเลือก 4 ช่วงข้อมูลสำคัญ ระบบเริ่มทำงานได้ทันทีโดยไม่ต้องรอประวัติ",
       "ตรวจจับพฤติกรรม High-Spend Weekend และรอบการจ่ายประจำเดือน"
     ],
     metrics: [
-      { label: "หมวดหมู่ Fixed", value: "฿12,419", sublabel: "ค่าเช่าห้อง + บิลประจำ + ผ่อนชำระ" },
-      { label: "หมวดหมู่ Discretionary", value: "฿6,830", sublabel: "คาเฟ่ & ช้อปปิ้งออนไลน์" },
+      { label: "หมวดหมู่ Fixed", value: "฿7,160", sublabel: "ค่าเช่าหอ ฿5,500 + บิลประจำ ฿1,660" },
+      { label: "หมวดหมู่ Discretionary", value: "฿6,840", sublabel: "งบกินใช้ 18 วัน (฿380/วัน)" },
       { label: "ระบบ Cold Start", value: "พร้อมทันที", sublabel: "เลือกเพียง 4 ข้อมูลหลัก (30 วินาที)" }
     ]
   },
