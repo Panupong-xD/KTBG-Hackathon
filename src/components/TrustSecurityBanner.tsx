@@ -19,9 +19,9 @@ export default function TrustSecurityBanner() {
     },
     {
       icon: ShieldCheck,
-      title: 'Zero-Overdraft Guarantee',
-      subtitle: 'การันตีบัญชีไม่ติดลบ 100%',
-      description: 'มี Hard Floor คุ้มกันเงินติดบัญชี ฿1,000 เสมอ และตรวจสอบตารางหนี้สินและบิลล่วงหน้าก่อนกวาดเงินทุกครั้ง'
+      title: 'Overdraft Protection',
+      subtitle: 'ป้องกันบัญชีติดลบด้วย Hard Floor',
+      description: 'มี Hard Floor คุ้มกันเงินติดบัญชี ฿1,000 เสมอ และตรวจสอบตารางหนี้สินและบิลล่วงหน้าก่อนยื่นปุ่มแนะนำออมทุกครั้ง'
     },
     {
       icon: RefreshCw,

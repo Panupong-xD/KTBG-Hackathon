@@ -59,8 +59,8 @@ export default function Hero() {
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <div>
-                <div className="text-sm font-bold text-slate-900">Zero Overdraft Guarantee</div>
-                <div className="text-xs text-slate-500 mt-0.5">การันตีไม่มีวันเงินติดลบหรือโดนค่าปรับ</div>
+                <div className="text-sm font-bold text-slate-900">Overdraft Protection</div>
+                <div className="text-xs text-slate-500 mt-0.5">ออกแบบมาเพื่อป้องกันเงินติดลบด้วย Hard Floor</div>
               </div>
             </div>
 

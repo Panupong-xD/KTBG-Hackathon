@@ -74,7 +74,7 @@ export default function FeatureDeepDive() {
                       AI Runway Control
                     </text>
                     <text x="500" y="26" textAnchor="end" fill="#94A3B8" fontSize="10">
-                      Monte Carlo 10k Sim
+                      Monte Carlo 10k Sim*
                     </text>
 
                     {/* Altitude Radar Horizon Grid Lines */}
@@ -172,8 +172,11 @@ export default function FeatureDeepDive() {
               </div>
               <div className="bg-emerald-50/70 border border-emerald-200/80 rounded-xl p-2.5 text-center">
                 <span className="text-slate-500 block text-[11px] font-medium">AI Runway Control</span>
-                <strong className="text-[#008744] font-bold">Safe Zone 100% ตลอด 30 วัน</strong>
+                <strong className="text-[#008744] font-bold">Safe Zone 85%+ สู่สิ้นเดือน*</strong>
               </div>
+            </div>
+            <div className="mt-2 text-right">
+              <span className="text-[10px] text-slate-400 font-normal">*เป้าหมายการจำลองเชิงเทคนิคในการพัฒนา (Simulation Benchmark)</span>
             </div>
           </div>
 
@@ -300,10 +303,10 @@ export default function FeatureDeepDive() {
 
                     {/* High-Yield Rate */}
                     <text x="447.5" y="145" textAnchor="middle" fill="#0F172A" fontSize="18" fontWeight="900" letterSpacing="-0.5">
-                      1.50%
+                      1.25%*
                     </text>
                     <text x="447.5" y="159" textAnchor="middle" fill="#059669" fontSize="9" fontWeight="bold" letterSpacing="0.5">
-                      P.A. DIGITAL YIELD
+                      P.A. DIGITAL YIELD (≤ ฿500K)
                     </text>
 
                     {/* Accumulated Reserve Box */}
@@ -325,13 +328,16 @@ export default function FeatureDeepDive() {
             {/* Bottom 2 Clean Metric Badges */}
             <div className="mt-6 pt-4 border-t border-slate-100 grid grid-cols-2 gap-3 text-xs">
               <div className="bg-blue-50/70 border border-blue-200/80 rounded-xl p-2.5 text-center">
-                <span className="text-slate-500 block text-[11px] font-medium">Zero-Overdraft Guarantee</span>
-                <strong className="text-blue-800 font-bold">Hard Floor ฿1,000 ปลอดภัย 100%</strong>
+                <span className="text-slate-500 block text-[11px] font-medium">Overdraft Protection</span>
+                <strong className="text-blue-800 font-bold">Hard Floor ฿1,000 คุ้มกันบัญชี</strong>
               </div>
               <div className="bg-emerald-50/70 border border-emerald-200/80 rounded-xl p-2.5 text-center">
                 <span className="text-slate-500 block text-[11px] font-medium">1-Tap High Yield</span>
-                <strong className="text-[#008744] font-bold">รับดอกเบี้ย 1.50% ต่อปีเมื่อยืนยัน</strong>
+                <strong className="text-[#008744] font-bold">รับดอกเบี้ย 1.25% ต่อปี* (เปิดบัญชีให้อัตโนมัติ)</strong>
               </div>
+            </div>
+            <div className="mt-2 text-right">
+              <span className="text-[10px] text-slate-400 font-normal">*อัตราดอกเบี้ยเงินฝาก K-eSavings ตามเกณฑ์ KBank สำหรับยอดไม่เกิน 500,000 บาท</span>
             </div>
           </div>
 

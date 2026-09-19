@@ -43,9 +43,9 @@ export default function InnovationConcept() {
             </a>
           </div>
 
-          {/* Guarantee Subtext */}
+          {/* Protection Subtext */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-emerald-100">
-            <span>• Zero Overdraft Guarantee</span>
+            <span>• Overdraft Protection (Hard Floor ฿1,000)</span>
             <span>• PDPA Bounded Consent</span>
             <span>• Data Science & ML Driven</span>
             <span>• สิทธิการอนุมัติ 100% โดยผู้ใช้ (ไม่หักเงินเอง)</span>

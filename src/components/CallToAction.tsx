@@ -26,12 +26,12 @@ export default function CallToAction() {
           </span>
 
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
-            พร้อมเปลี่ยนพฤติกรรมการเงิน <br />
-            ด้วย AI ที่รู้ใจคุณแล้วหรือยัง?
+            มองเห็นเส้นทางการเงินล่วงหน้า <br />
+            สร้างเงินออมก้อนแรกอย่างมั่นใจ
           </h2>
 
-          <p className="mt-4 text-emerald-50 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-            สัมผัสประสบการณ์ Financial Runway Intelligence ที่ช่วยให้คุณใช้เงินได้อย่างสบายใจ พร้อมเปลี่ยนเงินเศษเหลือเป็นเงินออมที่งอกเงย
+          <p className="mt-4 text-emerald-50 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+            ระบบพยากรณ์กระแสเงินสดที่ช่วยวางแผนยอดใช้ได้ต่อวันล่วงหน้าถึงวันเงินเดือนออก พร้อมให้คุณเป็นผู้ควบคุมและตัดสินใจอนุมัติการออมด้วยตนเอง 100%
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -51,9 +51,9 @@ export default function CallToAction() {
           </div>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-emerald-100">
-            <span>• Zero Overdraft Guarantee</span>
+            <span>• Overdraft Protection (Hard Floor ฿1,000)</span>
             <span>• PDPA Bounded Consent</span>
-            <span>• สิทธิการอนุมัติ 100% โดยผู้ใช้</span>
+            <span>• สิทธิการอนุมัติ 100% โดยผู้ใช้ (ไม่หักเงินเอง)</span>
           </div>
         </div>
 

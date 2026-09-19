@@ -21,6 +21,18 @@ By integrating **Time-Series Classification**, **Monte Carlo Probabilistic Traje
 
 ---
 
+## Hackathon Deliverables & Specifications
+
+This repository fulfills the three core deliverables for the competition:
+
+| # | Deliverable | Documentation / Asset | Key Highlights |
+| :-: | :--- | :--- | :--- |
+| **1** | **Technical & Data Architecture** | [01_TECHNICAL_AND_DATA_ARCHITECTURE.md](file:///Users/neutrino/Desktop/code/KBTG/docs/01_TECHNICAL_AND_DATA_ARCHITECTURE.md) | Data dictionary, Kafka CDC integration with KBank Core Banking (CASA), FAPI 1.0, MLOps stack, Cold Start protocol. |
+| **2** | **End-to-End System & Data Science Workflow** | [02_DATA_SCIENCE_AND_SYSTEM_WORKFLOW.md](file:///Users/neutrino/Desktop/code/KBTG/docs/02_DATA_SCIENCE_AND_SYSTEM_WORKFLOW.md) | 10,000-iteration Monte Carlo, Smooth Budget Re-balancing math, 24h user journey, Idempotency, Hard Floor ฿1,000 shield, PDPA & BOT compliance. |
+| **3** | **Interactive Web Application Prototype** | [Live Web App Source Code (`src/`)](file:///Users/neutrino/Desktop/code/KBTG/src) | Interactive Next.js scrollytelling web application simulating K PLUS native experience and AI calculations. |
+
+---
+
 ## Problem Statement: First Jobber Financial Fragility
 
 Early-career professionals encounter four recurring behavioral and structural financial bottlenecks:
@@ -34,33 +46,42 @@ Early-career professionals encounter four recurring behavioral and structural fi
 
 ## Dual-Pillar AI Architecture
 
-```
-                       [ K PLUS DATA SCIENCE ENGINE ]
-                                     |
-         +---------------------------+---------------------------+
-         |                                                       |
- [ PILLAR 01 : THE BRAIN ]                               [ PILLAR 02 : THE ACTUATOR ]
-      Dynamic Runway                                      Micro-Surplus Co-pilot
- (Predictive Telemetry Engine)                           (Smart Prompt & 1-Tap Save)
-         |                                                       |
-  • Monte Carlo 10,000 Sim                                • Daily Budget Calibration (฿380)
-  • Smooth Budget Re-balancing                            • Leftover Surplus Detection (+฿150)
-  • Early Warning Horizon (Day 21)                        • Zero Forced Debit (1-Tap Confirm)
-  • Safe Zone Touchdown (Day 30)                          • Hard Floor Reserve & Reverse Sweep
+```mermaid
+flowchart TD
+    Engine["K PLUS DATA SCIENCE ENGINE"]
+    
+    subgraph Pillar1 ["PILLAR 01 : THE BRAIN<br/>Dynamic Runway (Predictive Telemetry Engine)"]
+        direction TB
+        MC["Monte Carlo 10,000 Simulations"]
+        Smooth["Smooth Budget Re-balancing"]
+        Horizon["Early Warning Horizon (Day 21)"]
+        SafeZone["Safe Zone Touchdown (Day 30)"]
+    end
+
+    subgraph Pillar2 ["PILLAR 02 : THE ACTUATOR<br/>Micro-Surplus Co-pilot (Smart Prompt & 1-Tap Save)"]
+        direction TB
+        Budget["Daily Budget Calibration (฿380/day)"]
+        Leftover["Leftover Surplus Detection (+฿150)"]
+        Consent["Zero Forced Debit (1-Tap User Confirm)"]
+        Shield["Hard Floor Reserve (฿1,000) & Reverse Sweep"]
+    end
+
+    Engine --> Pillar1
+    Engine --> Pillar2
 ```
 
 ### Pillar 01: Dynamic Runway (Predictive Telemetry Engine)
 - **Monte Carlo & Bayesian Forecasting**: Executes 10,000 forward simulations across every billing cycle, factoring in scheduled commitments, probabilistic recurring expenses, and historical variance.
 - **Adaptive Daily Burn Rate**: Dynamically calculates a safe-to-spend daily operating budget (e.g., ฿380/day) that flexes according to remaining days and upcoming obligations.
 - **Smooth Budget Re-balancing**: When daily spending exceeds the recommended limit, the model avoids panic alerts and gently re-distributes minor adjustments across subsequent days to absorb variance smoothly.
-- **Cold-Start Onboarding Support**: For new accounts without transaction history, a 2-question baseline onboarding (estimated income and fixed rent) provides immediate, conservative runway forecasting.
+- **Cold-Start Onboarding Support**: For new accounts without transaction history, a 4-question quick-select onboarding (payday, income range, fixed rent/debts, income stability) provides immediate conservative runway forecasting without asking daily spending estimates.
 
 ### Pillar 02: Micro-Surplus Co-pilot & Shield (Human-in-the-Loop Execution)
 - **Leftover Surplus Detection**: Isolates actual end-of-day surplus capital (e.g., ฿150/day) generated when daily spending remains below the recommended burn rate.
 - **Zero Forced Debit Policy**: The system never debits accounts autonomously. It displays a clear prompt, requiring explicit 1-tap user confirmation for every sweep.
-- **High-Yield Target Account**: Directs user-confirmed savings into an interest-bearing account (K-eSavings at 1.50% p.a.).
+- **High-Yield Target Account**: Directs user-confirmed savings into an interest-bearing account (K-eSavings at 1.25% p.a.* for balances ≤ ฿500,000, with 1-tap seamless auto-provisioning).
 - **Hard Floor Liquidity Anchor**: Establishes an unbreachable ฿1,000 baseline reserve in the primary checking account that is permanently preserved.
-- **Reverse Sweep & Undo Circuit**: If unforeseen expenditures occur, funds can be immediately returned to checking in 1 click or undone within 24 hours, enforcing a **Zero-Overdraft Guarantee**.
+- **Reverse Sweep & Undo Circuit**: If unforeseen expenditures occur, funds can be immediately returned to checking in 1 click or undone within 24 hours, providing robust **Overdraft Protection**.
 
 ---
 
@@ -68,11 +89,11 @@ Early-career professionals encounter four recurring behavioral and structural fi
 
 | Phase | Designation | Core Algorithmic Framework | Operational Output |
 | :---: | :--- | :--- | :--- |
-| **01** | **Data Ingestion & Cold Start** | Time-Series Classification & 2-Question Onboarding | Categorizes transactions (98.4% accuracy) and initializes immediate conservative budgets for zero-history accounts. |
-| **02** | **Cash-Flow Runway & Re-balancing** | Monte Carlo Simulation & Dynamic Re-calibration | Projects survival probability (85% Safe Zone) into daily safe budgets with smooth post-overspending compensation. |
+| **01** | **Data Ingestion & Cold Start** | Time-Series Classification & 4-Question Onboarding | Categorizes transactions (target benchmark 98.4%) and initializes immediate conservative budgets for zero-history accounts. |
+| **02** | **Cash-Flow Runway & Re-balancing** | Monte Carlo Simulation & Dynamic Re-calibration | Projects survival probability (target 85%+ Safe Zone) into daily safe budgets with smooth post-overspending compensation. |
 | **03** | **Leftover Detection & LDI** | Least-Disruptive Intervention (LDI) Engine | Detects verified end-of-day leftover surpluses and computes targeted lifestyle micro-adjustments. |
 | **04** | **Co-pilot 1-Tap Consent** | Human-in-the-Loop Bounded Consent & PDPA | Strictly requires user-initiated 1-tap confirmation before executing any transfer (zero surprise debits). |
-| **05** | **Liquidity Shield & Yield** | Multi-Tier Savings Routing & Reverse Sweep | Accumulates user-approved funds at 1.50% p.a. yield backed by an unbreachable ฿1,000 Hard Floor and instant recovery. |
+| **05** | **Liquidity Shield & Yield** | Multi-Tier Savings Routing & Reverse Sweep | Accumulates user-approved funds at 1.25% p.a.* yield backed by an unbreachable ฿1,000 Hard Floor and instant recovery. |
 
 ---
 
@@ -159,7 +180,7 @@ npm run start
 
 - **Consent-First Architecture**: Automated sweeping operations require upfront user authorization with explicit policy boundaries.
 - **User-Defined Constraints**: Users retain absolute authority to adjust daily budget minimums, set maximum sweep limits, or suspend automation at any moment.
-- **Zero-Overdraft Enforcement**: Primary checking accounts maintain an unbreachable ฿1,000 hard floor backed by continuous bi-directional liquidity monitoring.
+- **Overdraft Protection & Hard Floor Enforcement**: Primary checking accounts maintain an unbreachable ฿1,000 hard floor backed by continuous bi-directional liquidity monitoring.
 - **Privacy by Design**: Analytical pipelines operate on tokenized, localized transaction identifiers to safeguard personal identifiable information (PII) in compliance with PDPA guidelines.
 
 ---

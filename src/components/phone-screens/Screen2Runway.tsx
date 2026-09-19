@@ -83,7 +83,7 @@ export default function Screen2Runway() {
             <span>ยอดใช้ได้วันนี้</span>
           </div>
           <div className="text-base font-bold text-white">
-            ฿420 <span className="text-xs font-normal text-slate-400">/ วัน</span>
+            ฿380 <span className="text-xs font-normal text-slate-400">/ วัน</span>
           </div>
           <div className="text-[10px] text-emerald-400 mt-0.5">
             เกลี่ยชดเชยนุ่มนวลหากเกิน

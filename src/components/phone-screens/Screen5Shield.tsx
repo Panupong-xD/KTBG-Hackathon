@@ -15,7 +15,7 @@ export default function Screen5Shield() {
           <span className="text-xs font-bold text-white">Liquidity Shield Active</span>
         </div>
         <span className="text-[10px] bg-emerald-500/20 text-emerald-300 font-semibold px-2 py-0.5 rounded-full border border-emerald-500/30">
-          Zero Overdraft
+          Overdraft Protection
         </span>
       </div>
 
@@ -31,7 +31,7 @@ export default function Screen5Shield() {
           ฿150.00
         </div>
         <p className="text-[11px] text-slate-300 mt-1">
-          ย้ายเข้า <span className="text-emerald-400 font-bold">K-eSavings</span> รับดอกเบี้ยสูง 1.50% ต่อปี
+          ย้ายเข้า <span className="text-emerald-400 font-bold">K-eSavings</span> รับดอกเบี้ยสูง 1.25% ต่อปี*
         </p>
       </div>
 
@@ -45,7 +45,7 @@ export default function Screen5Shield() {
           <span className="text-[10px] text-emerald-400 font-bold">฿1,000.00 Floor</span>
         </div>
         <p className="text-[11px] text-slate-300 leading-relaxed">
-          การันตีเงินติดบัญชีหลักไม่ต่ำกว่า ฿1,000 เสมอ แม้กดยืนยันออมไปแล้ว หากมีบิลด่วนฉุกเฉินก็มีระบบดึงเงินกลับได้ทันที
+          ป้องกันเงินติดบัญชีหลักไม่ต่ำกว่า ฿1,000 เสมอ แม้กดยืนยันออมไปแล้ว หากมีบิลด่วนฉุกเฉินก็มีระบบดึงเงินกลับได้ทันที
         </p>
       </div>
 

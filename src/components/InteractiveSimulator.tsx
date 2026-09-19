@@ -281,7 +281,7 @@ export default function InteractiveSimulator() {
               <span className="flex items-center gap-1 text-[#00A950]">
                 <ShieldCheck className="w-3.5 h-3.5" /> Bounded Consent
               </span>
-              <span>Zero Overdraft Policy</span>
+              <span>Overdraft Protection Policy</span>
             </div>
           </div>
 

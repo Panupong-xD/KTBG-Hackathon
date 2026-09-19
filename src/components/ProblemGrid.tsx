@@ -9,7 +9,7 @@ export default function ProblemGrid() {
       id: '01',
       title: 'Static Balance Trap',
       thaiTitle: 'กับดักยอดเงินคงเหลือ',
-      description: 'First Jobber เพิ่งได้เงินเดือนก้อนแรก เห็นเงินในบัญชีเหลือ 15,000 บาทแล้วคิดว่ารอด แต่ความจริงมีค่าเช่าหอพัก ค่าตัดบัตร และบิลคงค้างรอตัดอีก 12,000 บาทในอีก 18 วันข้างหน้า',
+      description: 'กรณีศึกษาตัวอย่าง: First Jobber เพิ่งได้เงินเดือนก้อนแรก เห็นเงินในบัญชีเหลือ 15,000 บาทแล้วคิดว่ารอด แต่ความจริงมีค่าเช่าหอพัก ค่าตัดบัตร และบิลคงค้างรอตัดอีก 12,000 บาทในอีก 18 วันข้างหน้า',
       traditionalApp: 'แสดงแค่ยอดเงินปัจจุบัน ไม่บอกว่าเงินนี้จะอยู่รอดได้อีกกี่วัน',
       aiSolution: 'คำนวณ Financial Runway เป็นหน่วย “จำนวนวัน” และ Safe Zone % ทันที'
     },
@@ -35,7 +35,7 @@ export default function ProblemGrid() {
       thaiTitle: 'คำแนะนำแบบกว้างๆ ไม่รู้จะเริ่มตรงไหน',
       description: 'แอปทั่วไปชอบเตือนแค่ “คุณควรประหยัดเงิน” แต่ First Jobbers ไม่รู้ว่าต้องเริ่มตัดค่าใช้จ่ายหมวดไหน วันละกี่บาท ที่กระทบคุณภาพชีวิตน้อยที่สุด',
       traditionalApp: 'เตือนกว้างๆ ไร้คำแนะนำที่ปฏิบัติได้จริง',
-      aiSolution: 'Least-Disruptive Intervention แนะนำเช่น “ลด Food Delivery ฿80/วัน ดัน Safe Zone +7%”'
+      aiSolution: 'Least-Disruptive Intervention (LDI) แนะนำเช่น “ลด Food Delivery ฿80/วัน ดัน Safe Zone +7%” (ตัวอย่างคำแนะนำจำลองจากระบบ)'
     }
   ];
 
@@ -71,32 +71,38 @@ export default function ProblemGrid() {
                   </span>
                 </div>
 
-                  <div className="text-xs font-bold text-[#00A950] uppercase tracking-wider mb-1">
-                    {item.title}
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2">
-                    {item.thaiTitle}
-                  </h3>
-
-                  <p className="text-sm text-slate-600 leading-relaxed mb-6">
-                    {item.description}
-                  </p>
+                <div className="text-xs font-bold text-[#00A950] uppercase tracking-wider mb-1">
+                  {item.title}
                 </div>
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2">
+                  {item.thaiTitle}
+                </h3>
 
-                {/* Comparison Box */}
-                <div className="space-y-2 pt-4 border-t border-slate-100 text-xs">
-                  <div className="flex items-start gap-2 text-slate-500 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
-                    <X className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
-                    <div>
-                      <strong className="text-slate-700">แอปเดิม:</strong> {item.traditionalApp}
-                    </div>
+                <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                  {item.description}
+                </p>
+              </div>
+
+              {/* Comparison Box with Enhanced Contrast and Icons */}
+              <div className="space-y-2.5 pt-4 border-t border-slate-100 text-xs">
+                <div className="flex items-start gap-2.5 text-slate-600 bg-rose-50/50 p-3 rounded-xl border border-rose-100/80">
+                  <div className="w-5 h-5 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center shrink-0 mt-0.5">
+                    <X className="w-3.5 h-3.5" />
                   </div>
-                  <div className="flex items-start gap-2 text-emerald-950 bg-emerald-50 p-2.5 rounded-lg border border-emerald-200">
-                    <Check className="w-4 h-4 text-[#00A950] shrink-0 mt-0.5" />
-                    <div>
-                      <strong className="text-[#008744]">K-Runway Solution:</strong> {item.aiSolution}
-                    </div>
+                  <div>
+                    <span className="font-bold text-rose-700 block mb-0.5">แอปธนาคารแบบเดิม</span>
+                    <span>{item.traditionalApp}</span>
                   </div>
+                </div>
+                <div className="flex items-start gap-2.5 text-slate-800 bg-emerald-50/80 p-3 rounded-xl border border-emerald-200">
+                  <div className="w-5 h-5 rounded-full bg-[#00A950] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
+                  <div>
+                    <span className="font-bold text-[#008744] block mb-0.5">K-Runway Solution</span>
+                    <span>{item.aiSolution}</span>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
