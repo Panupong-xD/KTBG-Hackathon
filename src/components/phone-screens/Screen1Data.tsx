@@ -67,7 +67,7 @@ export default function Screen1Data() {
       {/* Transaction Feed Header */}
       <div className="flex items-center justify-between text-xs text-slate-400 px-1 mb-2 font-medium">
         <span>รายการล่าสุด (AI Tagged)</span>
-        <span className="text-[10px] text-emerald-400">จำแนกแล้ว 100%</span>
+        <span className="text-[10px] text-emerald-400">จำแนกครบถ้วน</span>
       </div>
 
       {/* Transactions List */}

@@ -191,7 +191,7 @@ export default function FeatureDeepDive() {
                 Micro-Surplus Co-pilot : บัญชีหลักสู่ตู้เซฟเงินออม
               </h3>
               <p className="text-xs sm:text-sm text-slate-500 mb-6">
-                ระบบไม่หักเงินเองเด็ดขาด ตรวจพบเงินเหลือสิ้นวันแล้วถามให้กดยืนยันออม พร้อม Hard Floor คุ้มกัน 100%
+                ระบบไม่หักเงินเองเด็ดขาด ตรวจพบเงินเหลือสิ้นวันแล้วถามให้กดยืนยันออม พร้อมเงินสำรองก้นบัญชี (Hard Floor) คอยคุ้มกัน
               </p>
 
               {/* Stage: Clean Symbolic Vector Infographic (Wallet ➔ Smart Sweep ➔ Locked Vault) */}
@@ -244,7 +244,7 @@ export default function FeatureDeepDive() {
                     <rect x="30" y="186" width="165" height="68" rx="10" fill="#EFF6FF" stroke="#BFDBFE" strokeWidth="1" />
                     <text x="42" y="208" fill="#1E40AF" fontSize="10" fontWeight="bold">Hard Floor</text>
                     <text x="183" y="209" textAnchor="end" fill="#1D4ED8" fontSize="13" fontWeight="900">฿1,000</text>
-                    <text x="42" y="226" fill="#3B82F6" fontSize="8">เงินก้นบัญชี (ห้ามแตะต้อง 100%)</text>
+                    <text x="42" y="226" fill="#3B82F6" fontSize="8">เงินก้นบัญชี (กันชนฉุกเฉิน)</text>
                     <text x="42" y="240" fill="#60A5FA" fontSize="7.5">มี Reverse Sweep คอยคุ้มกัน</text>
 
                     {/* ========================================================= */}

@@ -60,7 +60,7 @@ export default function Hero() {
               </div>
               <div>
                 <div className="text-sm font-bold text-slate-900">Overdraft Protection</div>
-                <div className="text-xs text-slate-500 mt-0.5">ออกแบบมาเพื่อป้องกันเงินติดลบด้วย Hard Floor</div>
+                <div className="text-xs text-slate-500 mt-0.5">ออกแบบมาเพื่อป้องกันเงินติดลบด้วยเงินสำรองก้นบัญชี (Hard Floor)</div>
               </div>
             </div>
 
