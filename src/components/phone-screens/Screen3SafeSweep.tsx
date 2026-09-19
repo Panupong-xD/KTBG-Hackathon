@@ -30,7 +30,7 @@ export default function Screen3SafeSweep() {
               ฿150.00
             </div>
             <p className="text-[11px] text-slate-300 mt-1">
-              คำนวณจากวันที่ใช้ต่ำกว่างบ และหักบิลล่วงหน้าครบ 100% แล้ว
+              คำนวณจากวันที่ใช้ต่ำกว่างบ และหักสำรองบิลล่วงหน้าแล้ว
             </p>
           </div>
           <div className="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-300 font-bold">
@@ -71,7 +71,7 @@ export default function Screen3SafeSweep() {
         
         <div className="bg-slate-900/60 rounded-lg p-2.5 border border-slate-700/40">
           <div className="flex items-center justify-between text-xs mb-1.5">
-            <span className="font-bold text-slate-200">✈️ Pocket: ทริปโตเกียว 2026</span>
+            <span className="font-bold text-slate-200">Pocket: ทริปโตเกียว 2026</span>
             <span className="font-mono text-emerald-400 text-xs">฿34,000 / ฿50,000</span>
           </div>
           <div className="w-full bg-slate-800 rounded-full h-2 mb-2">
