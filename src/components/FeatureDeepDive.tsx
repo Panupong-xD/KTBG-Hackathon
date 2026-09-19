@@ -78,11 +78,14 @@ export default function FeatureDeepDive() {
                     </text>
 
                     {/* Altitude Radar Horizon Grid Lines */}
-                    <line x1="40" y1="55" x2="500" y2="55" stroke="#E2E8F0" strokeWidth="1" strokeDasharray="3 3" />
-                    <text x="35" y="58" textAnchor="end" fill="#94A3B8" fontSize="8.5">฿15k</text>
+                    <line x1="40" y1="52" x2="500" y2="52" stroke="#E2E8F0" strokeWidth="1" strokeDasharray="3 3" />
+                    <text x="35" y="55" textAnchor="end" fill="#94A3B8" fontSize="8.5">฿20k</text>
 
-                    <line x1="40" y1="120" x2="500" y2="120" stroke="#E2E8F0" strokeWidth="1" strokeDasharray="3 3" />
-                    <text x="35" y="123" textAnchor="end" fill="#94A3B8" fontSize="8.5">฿5k</text>
+                    <line x1="40" y1="86" x2="500" y2="86" stroke="#E2E8F0" strokeWidth="1" strokeDasharray="3 3" />
+                    <text x="35" y="89" textAnchor="end" fill="#94A3B8" fontSize="8.5">฿15k</text>
+
+                    <line x1="40" y1="140" x2="500" y2="140" stroke="#E2E8F0" strokeWidth="1" strokeDasharray="3 3" />
+                    <text x="35" y="143" textAnchor="end" fill="#94A3B8" fontSize="8.5">฿5k</text>
 
                     <line x1="40" y1="190" x2="500" y2="190" stroke="#FCA5A5" strokeWidth="1.2" strokeDasharray="4 4" />
                     <text x="35" y="193" textAnchor="end" fill="#EF4444" fontSize="8.5" fontWeight="bold">฿1k</text>
@@ -93,15 +96,15 @@ export default function FeatureDeepDive() {
                       DANGER ZONE : ยอดคงเหลือต่ำกว่า ฿1,000
                     </text>
 
-                    {/* Safe Glide Slope Shaded Area */}
+                    {/* Safe Glide Slope Shaded Area (Passes through ฿15k at Day 12) */}
                     <polygon 
-                      points="45,65 170,95 310,130 475,165 475,190 45,190" 
+                      points="45,52 195,86 330,124 475,165 475,190 45,190" 
                       fill="url(#glideGreenGlow)" 
                     />
 
-                    {/* Unmanaged Descent Path (Red Dashed Line dropping on Day 21) */}
+                    {/* Unmanaged Descent Path (Starts close at Day 1, diverges progressively, dropping on Day 21) */}
                     <path
-                      d="M 45 65 C 150 85, 230 130, 315 190 L 345 228"
+                      d="M 45 52 C 165 72, 235 110, 330 190 L 355 228"
                       fill="none"
                       stroke="#EF4444"
                       strokeWidth="2.5"
@@ -109,33 +112,24 @@ export default function FeatureDeepDive() {
                     />
 
                     {/* Crash Impact Marker on Day 21 */}
-                    <circle cx="315" cy="190" r="5" fill="#EF4444" stroke="#FFFFFF" strokeWidth="2" />
-                    <rect x="235" y="148" width="150" height="26" rx="6" fill="#FEF2F2" stroke="#FCA5A5" strokeWidth="1" />
-                    <text x="310" y="165" textAnchor="middle" fill="#B91C1C" fontSize="10.5" fontWeight="bold">
+                    <circle cx="330" cy="190" r="5" fill="#EF4444" stroke="#FFFFFF" strokeWidth="2" />
+                    <rect x="255" y="148" width="150" height="26" rx="6" fill="#FEF2F2" stroke="#FCA5A5" strokeWidth="1" />
+                    <text x="330" y="165" textAnchor="middle" fill="#B91C1C" fontSize="10.5" fontWeight="bold">
                       Day 21 : เงินหมดก่อนสิ้นเดือน
                     </text>
 
-                    {/* AI Controlled Glide Path (Solid KBank Green Curve) */}
+                    {/* AI Controlled Glide Path (Solid KBank Green Curve, passing ฿15k at Day 12) */}
                     <path
-                      d="M 45 65 C 170 95, 310 130, 475 165"
+                      d="M 45 52 C 175 75, 300 115, 475 165"
                       fill="none"
                       stroke="#00A950"
                       strokeWidth="3.5"
                       strokeLinecap="round"
                     />
 
-                    {/* Aircraft Glider Icon Riding the Green Slope */}
-                    <g transform="translate(250, 100)">
-                      <path 
-                        d="M 0 0 L 16 7 L 16 11 L 3 8 L 3 16 L 8 19 L 8 22 L 0 20 L -8 22 L -8 19 L -3 16 L -3 8 L -16 11 L -16 7 Z" 
-                        fill="#00A950" 
-                        transform="rotate(12) scale(0.65)" 
-                      />
-                    </g>
-
                     {/* AI Safe-to-Spend Floating Badge */}
-                    <rect x="155" y="74" width="152" height="26" rx="13" fill="#00A950" filter="drop-shadow(0 2px 4px rgba(0,169,80,0.25))" />
-                    <text x="231" y="91" textAnchor="middle" fill="#FFFFFF" fontSize="11" fontWeight="bold">
+                    <rect x="175" y="68" width="152" height="26" rx="13" fill="#00A950" filter="drop-shadow(0 2px 4px rgba(0,169,80,0.25))" />
+                    <text x="251" y="85" textAnchor="middle" fill="#FFFFFF" fontSize="11" fontWeight="bold">
                       Safe-to-Spend : ฿380 / วัน
                     </text>
 
@@ -150,10 +144,10 @@ export default function FeatureDeepDive() {
                     <text x="45" y="262" textAnchor="start" fill="#64748B" fontSize="10" fontWeight="bold">
                       Day 1 (เงินเดือนออก)
                     </text>
-                    <text x="180" y="262" textAnchor="middle" fill="#94A3B8" fontSize="10">
-                      Day 10
+                    <text x="195" y="262" textAnchor="middle" fill="#94A3B8" fontSize="10">
+                      Day 12
                     </text>
-                    <text x="315" y="262" textAnchor="middle" fill="#DC2626" fontSize="10" fontWeight="bold">
+                    <text x="330" y="262" textAnchor="middle" fill="#DC2626" fontSize="10" fontWeight="bold">
                       Day 21 (จุดเสี่ยง)
                     </text>
                     <text x="500" y="262" textAnchor="end" fill="#008744" fontSize="10" fontWeight="bold">
@@ -327,13 +321,19 @@ export default function FeatureDeepDive() {
 
             {/* Bottom 2 Clean Metric Badges */}
             <div className="mt-6 pt-4 border-t border-slate-100 grid grid-cols-2 gap-3 text-xs">
-              <div className="bg-blue-50/70 border border-blue-200/80 rounded-xl p-2.5 text-center">
+              <div className="bg-blue-50/70 border border-blue-200/80 rounded-xl p-2.5 text-center flex flex-col justify-center">
                 <span className="text-slate-500 block text-[11px] font-medium">Overdraft Protection</span>
-                <strong className="text-blue-800 font-bold">Hard Floor ฿1,000 คุ้มกันบัญชี</strong>
+                <strong className="text-blue-800 font-bold">
+                  Hard Floor ฿1,000 คุ้มกันบัญชี <br />
+                  (กันเงินติดบัญชีเสมอ)
+                </strong>
               </div>
-              <div className="bg-emerald-50/70 border border-emerald-200/80 rounded-xl p-2.5 text-center">
+              <div className="bg-emerald-50/70 border border-emerald-200/80 rounded-xl p-2.5 text-center flex flex-col justify-center">
                 <span className="text-slate-500 block text-[11px] font-medium">1-Tap High Yield</span>
-                <strong className="text-[#008744] font-bold">รับดอกเบี้ย 1.25% ต่อปี* (เปิดบัญชีให้อัตโนมัติ)</strong>
+                <strong className="text-[#008744] font-bold">
+                  รับดอกเบี้ย 1.25% ต่อปี* <br />
+                  (เปิดบัญชีให้อัตโนมัติ)
+                </strong>
               </div>
             </div>
             <div className="mt-2 text-right">
